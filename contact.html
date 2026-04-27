@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Full Bloom Coaching</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="site-wrapper">
+      <header class="site-header">
+        <div class="nav-shell">
+          <a href="index.html" class="nav-logo">
+            <img src="assets/images/nav-logo.png" alt="Full Bloom Coaching" />
+          </a>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <img src="assets/images/menu 1.png" alt="" />
+          </button>
+
+          <nav class="nav-menu">
+            <a href="about.html">About Vivienne</a>
+            <a href="method.html">The Method</a>
+            <a href="contact.html" aria-current="page">Contact</a>
+            <a href="index.html#booking" class="nav-cta">Book a Call</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="contact-page">
+          <div class="section-inner contact-inner">
+            <div class="contact-heading">
+              <h1>Contact</h1>
+            </div>
+
+            <div class="contact-grid">
+              <div class="contact-copy">
+                <h2>Get in touch with Vivienne</h2>
+                <p>
+                  Send a message below and Vivienne will respond as soon as
+                  possible.
+                </p>
+              </div>
+
+              <form
+                class="contact-form"
+                id="contactForm"
+                action="https://formsubmit.co/ajax/info@fullbloomcoaching.co.uk"
+                method="POST"
+              >
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New Full Bloom enquiry"
+                />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="basic" />
+
+                <label>
+                  Your name
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                  />
+                </label>
+
+                <label>
+                  Your email address
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                  />
+                </label>
+
+                <label>
+                  Your query
+                  <textarea
+                    name="message"
+                    placeholder="Enter your query here"
+                    required
+                  ></textarea>
+                </label>
+
+                <p class="form-message" id="formMessage" hidden>
+                  Thank you — your message has been sent. Vivienne will be in
+                  touch soon.
+                </p>
+
+                <button type="submit" class="btn contact-submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer" id="contact">
+        <div class="footer-brand">
+          <img src="assets/images/logo-footer.png" alt="Full Bloom Coaching" />
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="#">Join Patreon Community</a>
+          </div>
+
+          <div class="footer-column">
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">YouTube</a>
+          </div>
+        </div>
+
+        <div class="footer-credit">
+          <p>Website By</p>
+          <a href="#">Sage Studios</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
