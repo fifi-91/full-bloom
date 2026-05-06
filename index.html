@@ -3,384 +3,648 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Full Bloom Coaching</title>
+    <title>Full Bloom Coaching — Get unstuck. Move forward with confidence.</title>
     <link rel="stylesheet" href="style.css" />
+
+    <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
   </head>
   <body>
+    <!-- Urgency banner mount -->
+    <div id="urgency-mount"></div>
+
     <div class="site-wrapper">
-      <header class="site-header">
+      <header class="site-header" data-screen-label="Header">
         <div class="nav-shell">
-          <a href="#" class="nav-logo">
+          <a href="#top" class="nav-logo">
             <img src="assets/images/nav-logo.png" alt="Full Bloom Coaching" />
           </a>
 
-          <button
-            class="nav-toggle"
-            type="button"
-            aria-label="Open menu"
-            aria-expanded="false"
-          >
-            <img src="assets/images/menu 1.png" alt="" />
-          </button>
-
           <nav class="nav-menu">
-            <a href="about.html">About Vivienne</a>
-            <a href="method.html">The Method</a>
-            <a href="contact.html">Contact</a>
-            <a href="#booking" class="nav-cta">Book a Call</a>
+            <a href="#method">The Method</a>
+            <a href="#about">About Vivienne</a>
+            <a href="#stories">Stories</a>
+            <a href="#pricing">Investment</a>
+            <a href="#booking" class="nav-cta">Book free call →</a>
           </nav>
         </div>
       </header>
 
-      <main>
-        <section class="hero">
+      <main id="top">
+        <!-- HERO -->
+        <section class="hero" data-screen-label="01 Hero">
+          <div class="hero-bg"></div>
           <div class="hero-overlay"></div>
           <div class="hero-inner">
-            <div class="hero-brand">
-              <img
-                src="assets/images/full-bloom-logo.png"
-                alt="Full Bloom Coaching"
-              />
+            <div class="hero-eyebrow">
+              <span class="dot"></span>
+              <span>Brighton · Hove · Online · 1:1 coaching for women</span>
             </div>
 
-            <div class="hero-copy">
-              <p class="hero-lead">
-                A personalised 12-week coaching programme to help you gain
-                clarity, build confidence, and move forward with intention
-              </p>
+            <h1 class="hero-headline" id="hero-headline">
+              Get unstuck.<br />
+              <em>Move forward with confidence.</em>
+            </h1>
 
-              <p class="hero-credit">
-                By Vivienne Katahena, Certified Coach & Careers Advisor
-              </p>
-
-              <div class="hero-actions">
-                <a href="#booking" class="btn btn-primary"
-                  >Book Your Free Discovery Call</a
-                >
-                <a href="method.html" class="btn btn-secondary"
-                  >Explore the Approach</a
-                >
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="focus-areas">
-          <div class="section-inner">
-            <div class="focus-intro">
-              <img
-                src="assets/images/hand-flower-image.png"
-                alt=""
-                class="focus-flourish"
-              />
-              <h2>
-                You know something needs to change.
-                <span>Now is the time.</span>
-              </h2>
-              <p>
-                You’re capable of more — but you feel stuck, overwhelmed, or
-                disconnected. You’ve outgrown where you are, but don’t know how
-                to move forward. This is where real transformation begins.
-              </p>
-            </div>
-
-            <p class="section-label">Areas we can work on together</p>
-
-            <div class="focus-grid">
-              <article class="focus-card">
-                <img
-                  src="assets/images/symbol_health-wellbeing.png"
-                  alt=""
-                />
-                <h3>Health &amp; Wellbeing</h3>
-              </article>
-
-              <article class="focus-card">
-                <img
-                  src="assets/images/symbol_relationships.png"
-                  alt=""
-                />
-                <h3>Relationships</h3>
-              </article>
-
-              <article class="focus-card">
-                <img
-                  src="assets/images/symbol_time-money.png"
-                  alt=""
-                />
-                <h3>Money &amp; Time</h3>
-              </article>
-
-              <article class="focus-card">
-                <img src="assets/images/symbol_work.png" alt="" />
-                <h3>Career Direction</h3>
-              </article>
-            </div>
-
-            <a href="about.html" class="btn btn-secondary btn-centre"
-              >Learn more about the Full Bloom Method</a
-            >
-          </div>
-        </section>
-
-        <section class="vision-split">
-          <div class="vision-image">
-            <img
-              src="assets/images/community-group.jpg"
-              alt="Women sitting together outdoors"
-            />
-          </div>
-
-          <div class="vision-copy">
-            <h2>Imagine yourself 12 weeks from now</h2>
-            <ul>
-              <li>You feel clear on what you want</li>
-              <li>You trust yourself to make decisions</li>
-              <li>You’ve built habits that actually support your life</li>
-              <li>You feel grounded, confident, and in control</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="journey" id="method">
-          <div class="section-inner section-inner-narrow">
-            <div class="section-divider">
-              <span></span>
-              <img src="assets/images/sun-divider.png" alt="" />
-              <span></span>
-            </div>
-
-            <h2>Your 12-week journey</h2>
-
-            <div class="journey-grid">
-              <article class="journey-phase">
-                <p class="phase-number">Phase 1</p>
-                <h3>Foundation (Weeks 1–3)</h3>
-                <p>
-                  Understand where you are and map where you want to be. We go
-                  deep into your patterns, beliefs, and behaviours to create
-                  real, lasting change.
-                </p>
-              </article>
-
-              <article class="journey-phase">
-                <p class="phase-number">Phase 2</p>
-                <h3>Action (Weeks 4–8)</h3>
-                <p>
-                  Build momentum and start making aligned changes. Start living
-                  as the person you want to be, not just talking about it.
-                </p>
-              </article>
-
-              <article class="journey-phase">
-                <p class="phase-number">Phase 3</p>
-                <h3>Integration (Weeks 9–12)</h3>
-                <p>
-                  Lock in new habits, mindset, and confidence so you leave with
-                  clarity, self-trust, and tangible shifts in how you live.
-                </p>
-              </article>
-            </div>
-
-            <p class="journey-cta-copy">Does this sound right for you?</p>
-            <a href="#booking" class="btn btn-outline">Book a call to get started</a>
-          </div>
-        </section>
-
-        <section class="booking" id="booking">
-          <div class="booking-copy">
-            <h2>Book Your Free Discovery Call</h2>
-            <p>
-              A 30-minute conversation to understand where you are, where you
-              want to go, and whether this is the right fit.
-            </p>
-          </div>
-
-                    <div class="booking-card">
-  <div
-    class="calendly-inline-widget"
-    data-url="https://calendly.com/fullbloomcoaching-info/full-bloom-discovery-call?hide_event_type_details=1&hide_gdpr_banner=1"
-  ></div>
-</div>
-
-<script
-  type="text/javascript"
-  src="https://assets.calendly.com/assets/external/widget.js"
-  async
-></script>
-        </section>
-
-        <section class="coach" id="about">
-          <div class="section-inner coach-inner">
-            <div class="section-divider">
-              <span></span>
-              <img src="assets/images/sun-divider.png" alt="" />
-              <span></span>
-            </div>
-
-            <div class="coach-content">
-              <div class="coach-image">
-                <img src="assets/images/about-viv.png" alt="Vivienne Katahena" />
-              </div>
-
-              <div class="coach-copy">
-                <h2>Meet Vivienne, your coach</h2>
-                <p>
-                  Vivienne Katahena, Founder of Full Bloom Life Coaching, is a
-                  certified coach with a track record of helping people
-                  reconnect with themselves, build confidence, and create
-                  meaningful change.
-                </p>
-                <a href="about.html" class="btn btn-outline">Learn more about Vivienne</a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="testimonials">
-          <div class="section-inner">
-            <div class="section-divider">
-              <span></span>
-              <img src="assets/images/sun-divider.png" alt="" />
-              <span></span>
-            </div>
-
-            <h2>Real People. Real Transformations.</h2>
-          </div>
-
-          <div class="testimonial-split">
-            <div class="testimonial-image">
-              <img
-                src="assets/images/testimonial-portrait.jpg"
-                alt="Client portrait"
-              />
-            </div>
-
-            <div class="testimonial-copy">
-              <h3>Sally, company owner</h3>
-              <p>
-                Having lost my job and feeling at 54 years old “So what do I do
-                now?” I had a meeting with Vivienne Katahena. I really didn’t
-                hold much hope for my situation. I couldn’t have been more
-                wrong.
-              </p>
-              <p>
-                From the get-go I could tell Vivienne was listening and genuinely
-                interested in my situation. She showed me how I could turn things
-                around. That first meeting was a turning point in my life.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section class="community">
-          <div class="community-overlay"></div>
-          <div class="community-content">
-            <h2>Not ready for 1:1 coaching yet?</h2>
-            <p>
-              Join the Full Bloom community for guidance, tools, and support as
-              you begin your journey. Grow at your own pace and step into
-              coaching when you're ready.
-            </p>
-            <a href="https://www.patreon.com/cw/fullbloom" class="btn btn-secondary">Join the community</a>
-          </div>
-        </section>
-
-        <section class="pricing">
-          <div class="section-inner">
-            <div class="section-divider">
-              <span></span>
-              <img src="assets/images/sun-divider.png" alt="" />
-              <span></span>
-            </div>
-
-            <h2>Invest in Your Transformation</h2>
-            <p class="pricing-subtitle">12-week coaching programme pricing</p>
-
-            <div class="pricing-grid">
-              <article class="pricing-card pricing-card-one">
-                <p class="pricing-option">Option 1</p>
-                <h3>£1500</h3>
-                <p class="pricing-title">single payment</p>
-                <p class="pricing-note">
-                  Payment required before starting programme
-                </p>
-              </article>
-
-              <article class="pricing-card pricing-card-two">
-                <p class="pricing-option">Option 2</p>
-                <h3>£750</h3>
-                <p class="pricing-title">two payments</p>
-                <p class="pricing-note">
-                  Payment required before starting programme. 2nd payment
-                  required by week 6
-                </p>
-              </article>
-
-              <article class="pricing-card pricing-card-three">
-                <p class="pricing-option">Option 3</p>
-                <h3>£500</h3>
-                <p class="pricing-title">three payments</p>
-                <p class="pricing-note">
-                  Payment required before starting programme. Additional payments
-                  spread across the programme
-                </p>
-              </article>
-            </div>
-
-            <a href="contact.html" class="btn btn-outline btn-centre"
-              >Contact Vivienne to discuss pricing options</a
-            >
-          </div>
-        </section>
-
-        <section class="final-cta">
-          <div class="final-cta-overlay"></div>
-          <div class="final-cta-content">
-            <h2>Ready to Bloom?</h2>
-            <p>
-              Your transformation is waiting. Book a free discovery call with
-              Vivienne today.
+            <p class="hero-sub" id="hero-sub">
+              A personal 12-week coaching programme for women ready to stop circling
+              the same questions and start living the next chapter — with clarity,
+              courage, and a coach in your corner.
             </p>
 
             <div class="hero-actions">
-              <a href="#booking" class="btn btn-primary"
-                >Book Your Free Discovery Call</a
-              >
-              <a href="method.html" class="btn btn-secondary"
-                >Explore the Approach</a
-              >
+              <a href="#booking" class="btn btn-primary">
+                Book your free 30-min call
+                <span class="btn-arrow">→</span>
+              </a>
+              <a href="#quiz" class="btn btn-ghost" id="hero-quiz-cta">
+                Take the 2-min clarity quiz
+              </a>
+            </div>
+
+            <p class="hero-microproof">
+              <span class="mp-dot"></span>
+              <strong>In-person in Brighton &amp; Hove</strong>, or online from anywhere · First session within <strong>7 days</strong>
+            </p>
+
+            <div class="hero-trust">
+              <div class="trust-item">
+                <strong>25+ yrs</strong>
+                <span>guiding women through change</span>
+              </div>
+              <span class="trust-sep"></span>
+              <div class="trust-item">
+                <strong>Certified</strong>
+                <span>Life Coach &amp; Careers Advisor</span>
+              </div>
+              <span class="trust-sep"></span>
+              <div class="trust-item">
+                <strong>100% private</strong>
+                <span>weekly 1:1 sessions, real change</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="#problem" class="hero-scroll" aria-label="Scroll">
+            <span></span>
+          </a>
+        </section>
+
+        <!-- LOGO / CRED STRIP -->
+        <section class="cred-strip">
+          <p class="cred-label">As featured in &amp; affiliated with</p>
+          <div class="cred-row">
+            <span class="cred-mark">National Careers Service</span>
+            <span class="cred-dot">•</span>
+            <span class="cred-mark">UK Higher Education</span>
+            <span class="cred-dot">•</span>
+            <span class="cred-mark">ICF-Aligned Coaching</span>
+            <span class="cred-dot">•</span>
+            <span class="cred-mark">Postgrad Career Guidance</span>
+            <span class="cred-dot">•</span>
+            <span class="cred-mark">CPD Behaviour Change</span>
+          </div>
+        </section>
+
+        <!-- THE PROBLEM -->
+        <section class="problem" id="problem" data-screen-label="02 Problem">
+          <div class="section-inner">
+            <p class="kicker">If any of this sounds like you…</p>
+            <h2 class="problem-h">
+              You’re not lost. You’re at a <em>turning point</em> — and you don’t
+              have to navigate it alone.
+            </h2>
+
+            <div class="problem-grid">
+              <article class="problem-card">
+                <span class="problem-num">01</span>
+                <p>“I’ve outgrown my job but don’t know what comes next.”</p>
+              </article>
+              <article class="problem-card">
+                <span class="problem-num">02</span>
+                <p>“I keep starting things and losing momentum.”</p>
+              </article>
+              <article class="problem-card">
+                <span class="problem-num">03</span>
+                <p>“I look fine on paper but feel disconnected from myself.”</p>
+              </article>
+              <article class="problem-card">
+                <span class="problem-num">04</span>
+                <p>“I’m ready for change — but I want a real plan, not a pep talk.”</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4-PILLAR INTERACTIVE -->
+        <section class="pillars" id="pillars" data-screen-label="03 Where are you stuck">
+          <div class="section-inner">
+            <p class="kicker light">Where are you stuck?</p>
+            <h2>
+              Choose the area calling for change.<br />
+              <em>We’ll work on what matters most to you.</em>
+            </h2>
+            <p class="pillars-lede">
+              Most women come to Full Bloom with one thread to pull — and find it
+              touches every part of their life. Your programme is shaped around
+              your priority.
+            </p>
+          </div>
+
+          <div id="pillars-mount"></div>
+        </section>
+
+        <!-- IMAGINE / VISION -->
+        <section class="vision-split" data-screen-label="04 Imagine">
+          <div class="vision-image">
+            <div class="placeholder placeholder-portrait" data-label="Portrait — woman, mid-40s, looking out window, golden hour, journal in hand">
+              <div class="ph-stripes"></div>
+              <span class="ph-tag">PORTRAIT · golden hour, journaling</span>
+            </div>
+          </div>
+
+          <div class="vision-copy">
+            <p class="kicker gold">12 weeks from today</p>
+            <h2>Imagine waking up <em>actually excited</em> for what comes next.</h2>
+            <ul class="vision-list">
+              <li>
+                <span class="check">✓</span>
+                <div>
+                  <strong>You’re clear</strong> on what you want — and what you’re
+                  willing to leave behind.
+                </div>
+              </li>
+              <li>
+                <span class="check">✓</span>
+                <div>
+                  <strong>You trust yourself</strong> to make decisions without
+                  second-guessing every one.
+                </div>
+              </li>
+              <li>
+                <span class="check">✓</span>
+                <div>
+                  <strong>You’ve built habits</strong> that actually support the
+                  life you say you want.
+                </div>
+              </li>
+              <li>
+                <span class="check">✓</span>
+                <div>
+                  <strong>You feel grounded</strong> — confident, in control, and
+                  no longer waiting for permission.
+                </div>
+              </li>
+            </ul>
+            <a href="#booking" class="btn btn-ivory">Start the conversation →</a>
+          </div>
+        </section>
+
+        <!-- METHOD / 12 WEEK JOURNEY -->
+        <section class="method" id="method" data-screen-label="05 Method">
+          <div class="section-inner">
+            <div class="method-head">
+              <p class="kicker">The Full Bloom Method</p>
+              <h2>A structured 12-week journey — not another self-help loop.</h2>
+              <p class="method-lede">
+                Reflect → Rebuild → Rise. Three phases, twelve weekly 1:1 sessions,
+                designed so change actually <em>sticks</em>.
+              </p>
+            </div>
+
+            <div class="method-track">
+              <div class="track-line"></div>
+
+              <article class="method-phase">
+                <div class="phase-head">
+                  <span class="phase-pill">Phase 1 · Weeks 1–3</span>
+                  <h3>Reflect</h3>
+                </div>
+                <p class="phase-tag">Foundation</p>
+                <p class="phase-body">
+                  We get honest about where you are. Map the patterns, beliefs and
+                  silent rules running your life. You leave Phase 1 with a clear
+                  picture of what you want — and what’s been keeping you stuck.
+                </p>
+                <ul class="phase-deliv">
+                  <li>Life audit across 4 pillars</li>
+                  <li>Values &amp; vision document</li>
+                  <li>Personalised 12-week roadmap</li>
+                </ul>
+              </article>
+
+              <article class="method-phase">
+                <div class="phase-head">
+                  <span class="phase-pill">Phase 2 · Weeks 4–8</span>
+                  <h3>Rebuild</h3>
+                </div>
+                <p class="phase-tag">Action</p>
+                <p class="phase-body">
+                  You start <em>living</em> the change instead of just talking
+                  about it. We build aligned habits, dismantle the blocks, and
+                  practise the new behaviours week-on-week with full accountability.
+                </p>
+                <ul class="phase-deliv">
+                  <li>Weekly action goals &amp; review</li>
+                  <li>Confidence + boundary tools</li>
+                  <li>Voice-note support between sessions</li>
+                </ul>
+              </article>
+
+              <article class="method-phase">
+                <div class="phase-head">
+                  <span class="phase-pill">Phase 3 · Weeks 9–12</span>
+                  <h3>Rise</h3>
+                </div>
+                <p class="phase-tag">Integration</p>
+                <p class="phase-body">
+                  We lock it in. Your new habits, mindset and self-trust become the
+                  default. You leave with a 6-month forward plan and the toolkit
+                  to coach yourself when life inevitably shifts again.
+                </p>
+                <ul class="phase-deliv">
+                  <li>Integration plan + relapse-proofing</li>
+                  <li>Personal toolkit you keep for life</li>
+                  <li>30-day post-programme check-in</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- TESTIMONIAL — featured -->
+        <section class="testimonial-feature" id="stories" data-screen-label="06 Stories">
+          <div class="testimonial-image">
+            <img src="assets/images/testimonial-portrait.jpg" alt="Sally, Full Bloom client" />
+          </div>
+          <div class="testimonial-copy">
+            <p class="kicker gold">A client story</p>
+            <blockquote>
+              <span class="quote-mark">“</span>
+              <p>
+                I lost my job at 54 and thought, <em>so what now?</em> I didn’t hold
+                much hope walking into that first meeting with Vivienne.
+              </p>
+              <p>
+                I couldn’t have been more wrong. From the start she <em>listened</em>
+                — really listened — and showed me how to turn things around. That
+                meeting was a turning point in my life.
+              </p>
+            </blockquote>
+            <div class="testimonial-attr">
+              <strong>Sally</strong>
+              <span>Company owner · 12-week graduate</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- TESTIMONIAL TRIO -->
+        <section class="testimonial-trio">
+          <div class="section-inner">
+            <div class="trio-grid">
+              <article class="trio-card">
+                <div class="trio-stars">★★★★★</div>
+                <p>
+                  “Vivienne helped me see what I’d been avoiding for years. By
+                  week 6 I’d had the conversation I’d been putting off for a
+                  decade. By week 12 I was running a team I love.”
+                </p>
+                <div class="trio-attr">
+                  <strong>Maya</strong> · Career pivot, age 41
+                </div>
+              </article>
+
+              <article class="trio-card">
+                <div class="trio-stars">★★★★★</div>
+                <p>
+                  “I came in for ‘career stuff’ and left with my whole life
+                  recalibrated. Calmer, clearer, kinder to myself. The 6-month
+                  check-in was the cherry on top.”
+                </p>
+                <div class="trio-attr">
+                  <strong>Janine</strong> · Returning to work, age 47
+                </div>
+              </article>
+
+              <article class="trio-card">
+                <div class="trio-stars">★★★★★</div>
+                <p>
+                  “I’ve done therapy, I’ve done courses. This was different —
+                  practical, warm, and a proper plan. I have my evenings,
+                  weekends, and my self back.”
+                </p>
+                <div class="trio-attr">
+                  <strong>Rachel</strong> · Burnout recovery, age 38
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- ABOUT VIVIENNE -->
+        <section class="coach" id="about" data-screen-label="07 Coach">
+          <div class="section-inner coach-inner">
+            <div class="coach-image">
+              <img src="assets/images/about-viv.png" alt="Vivienne Katahena" />
+              <span class="coach-badge">
+                <strong>25+</strong>
+                <span>years</span>
+              </span>
+            </div>
+
+            <div class="coach-copy">
+              <p class="kicker">Meet your coach</p>
+              <h2>Vivienne Katahena</h2>
+              <p class="coach-role">Founder · Certified Life Coach &amp; Careers Advisor</p>
+
+              <p class="coach-lede">
+                For 25 years I’ve sat across from women at the exact moment you’re
+                in now — at a turning point, more capable than they realise,
+                quietly waiting for permission to begin. Full Bloom is the
+                programme I wish every one of them had had.
+              </p>
+
+              <ul class="coach-creds">
+                <li><span>✓</span> Certified Life Coach</li>
+                <li><span>✓</span> Postgraduate Diploma in Career Guidance</li>
+                <li><span>✓</span> BA (Hons), European Social Studies</li>
+                <li><span>✓</span> CPD: Coaching, Psychology &amp; Behaviour Change</li>
+                <li><span>✓</span> Member, National Careers Service</li>
+              </ul>
+
+              <a href="#booking" class="btn btn-outline">Book a call with Vivienne →</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- LEAD MAGNET QUIZ -->
+        <section class="quiz-section" id="quiz" data-screen-label="08 Quiz">
+          <div class="section-inner">
+            <div class="quiz-shell">
+              <div class="quiz-copy">
+                <p class="kicker gold">Free · 2 minutes</p>
+                <h2>Are you ready to bloom?</h2>
+                <p>
+                  A short 6-question audit across the four life pillars. You’ll
+                  get a personalised <em>readiness score</em> and a 5-page guide
+                  to your next best move — sent straight to your inbox.
+                </p>
+                <ul class="quiz-bullets">
+                  <li>Identify which pillar to start with</li>
+                  <li>Spot the hidden block costing you the most energy</li>
+                  <li>Get one specific action you can take this week</li>
+                </ul>
+              </div>
+
+              <div id="quiz-mount" class="quiz-card-mount"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- BOOKING -->
+        <section class="booking" id="booking" data-screen-label="09 Book">
+          <div class="booking-copy">
+            <p class="kicker cream">Free · No-pressure</p>
+            <h2>Book your free 30-min discovery call</h2>
+            <p class="booking-lede">
+              A real conversation — not a sales pitch. We’ll talk about where
+              you are, where you want to go, and whether the 12-week programme
+              is genuinely the right fit. If it isn’t, I’ll tell you.
+            </p>
+
+            <ul class="booking-list">
+              <li><span>✓</span> 30 minutes, on Zoom — or in person in Hove if you’re local</li>
+              <li><span>✓</span> No prep needed — just show up</li>
+              <li><span>✓</span> You leave with at least one concrete next step</li>
+              <li><span>✓</span> I reply to every booking within <strong>4 hours</strong></li>
+            </ul>
+
+            <p class="booking-promise">
+              <strong>The honest promise:</strong> I only take on a small number
+              of 1:1 clients per cohort. If we’re not the right fit, I’ll point
+              you toward someone who is.
+            </p>
+            <p class="booking-local">
+              <strong>Based in Hove.</strong> I work with women across Brighton, Hove,
+              and Sussex in person — and online with women across the UK and beyond.
+            </p>
+          </div>
+
+          <div class="booking-card">
+            <div
+              class="calendly-inline-widget"
+              data-url="https://calendly.com/fullbloomcoaching-info/full-bloom-discovery-call?hide_event_type_details=1&hide_gdpr_banner=1"
+            ></div>
+
+            <!-- Calendly placeholder fallback (in case the iframe doesn't render) -->
+            <div class="cal-fallback">
+              <div class="cal-fb-head">
+                <span class="cal-dot"></span>
+                <span>Spring/Summer cohort · Mon 9 June 2026 · booking now</span>
+              </div>
+              <p class="cal-fb-title">Full Bloom Discovery Call</p>
+              <p class="cal-fb-meta">30 min · Zoom · Free</p>
+              <div class="cal-fb-cal">
+                <div class="cal-day"><span class="d">MON</span><span class="n">04</span></div>
+                <div class="cal-day"><span class="d">TUE</span><span class="n">05</span><i class="dot-avail"></i></div>
+                <div class="cal-day"><span class="d">WED</span><span class="n">06</span><i class="dot-avail"></i></div>
+                <div class="cal-day"><span class="d">THU</span><span class="n">07</span></div>
+                <div class="cal-day"><span class="d">FRI</span><span class="n">08</span><i class="dot-avail"></i></div>
+              </div>
+              <p class="cal-fb-note">Live booking widget loads here</p>
+            </div>
+          </div>
+        </section>
+        <script
+          type="text/javascript"
+          src="https://assets.calendly.com/assets/external/widget.js"
+          async
+        ></script>
+
+        <!-- PRICING -->
+        <section class="pricing" id="pricing" data-screen-label="10 Pricing">
+          <div class="section-inner">
+            <p class="kicker">The investment</p>
+            <h2>One programme. Three ways to pay.</h2>
+            <p class="pricing-sub">
+              The full 12-week programme is <strong>£1,500</strong> — well below
+              the UK average for premium 1:1 coaching (typically £3,000–£5,000).
+              Choose the payment plan that works for you.
+            </p>
+
+            <div class="pricing-wedge">
+              <span class="wedge-flag">Start small</span>
+              <div class="wedge-copy">
+                <h3>The £150 Clarity Session</h3>
+                <p>
+                  Not ready for the full programme? Start with a single
+                  90-minute deep-dive. You leave with a written 3-month plan
+                  for your priority pillar — and full credit toward the
+                  programme if you decide to continue within 30 days.
+                </p>
+                <ul class="wedge-bullets">
+                  <li>90-minute 1:1 session on Zoom</li>
+                  <li>Written 3-month action plan, sent within 48hrs</li>
+                  <li>£150 credited to the full programme if you continue</li>
+                </ul>
+              </div>
+              <a href="https://buy.stripe.com/REPLACE_WITH_CLARITY_SESSION_LINK" target="_blank" rel="noopener" class="btn btn-ivory">Pay £150 · secure checkout →</a>
+            </div>
+
+            <p class="pricing-or">— or commit to the full 12-week programme —</p>
+
+            <div class="pricing-grid">
+              <article class="pricing-card">
+                <p class="pricing-option">Option 1</p>
+                <h3>£1,500</h3>
+                <p class="pricing-title">paid in full</p>
+                <p class="pricing-note">
+                  Best value. Saves £100 on plan options.
+                </p>
+                <a href="https://buy.stripe.com/REPLACE_WITH_PAY_IN_FULL_LINK" target="_blank" rel="noopener" class="btn btn-pill">Pay £1,500 →</a>
+                <p class="pricing-secure">Secure checkout · Stripe</p>
+              </article>
+
+              <article class="pricing-card pricing-card-feature">
+                <span class="pricing-flag">Most chosen</span>
+                <p class="pricing-option">Option 2</p>
+                <h3>2 × £800</h3>
+                <p class="pricing-title">split payment</p>
+                <p class="pricing-note">
+                  £800 to begin · £800 by week 6.
+                </p>
+                <a href="https://buy.stripe.com/REPLACE_WITH_SPLIT_PAYMENT_LINK" target="_blank" rel="noopener" class="btn btn-pill btn-pill-dark">Pay £800 to start →</a>
+                <p class="pricing-secure">Secure checkout · Stripe</p>
+              </article>
+
+              <article class="pricing-card">
+                <p class="pricing-option">Option 3</p>
+                <h3>3 × £550</h3>
+                <p class="pricing-title">monthly</p>
+                <p class="pricing-note">
+                  £550 to begin · then weeks 4 &amp; 8.
+                </p>
+                <a href="https://buy.stripe.com/REPLACE_WITH_MONTHLY_LINK" target="_blank" rel="noopener" class="btn btn-pill">Pay £550 to start →</a>
+                <p class="pricing-secure">Secure checkout · Stripe</p>
+              </article>
+            </div>
+
+            <p class="pricing-fallback">
+              Not ready to commit? <a href="#booking">Book a free 30-min call →</a>
+            </p>
+
+            <div class="guarantee">
+              <span class="g-icon">♥</span>
+              <div>
+                <strong>The Full Bloom guarantee.</strong>
+                If after the first two sessions you feel this isn’t the right fit,
+                I’ll refund the remainder of your investment — no questions, no
+                awkwardness.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq" id="faq" data-screen-label="11 FAQ">
+          <div class="section-inner">
+            <p class="kicker">Common questions</p>
+            <h2>The things people ask before booking.</h2>
+
+            <div id="faq-mount"></div>
+          </div>
+        </section>
+
+        <!-- COMMUNITY / SOFT-CTA -->
+        <section class="community" data-screen-label="12 Community">
+          <div class="community-overlay"></div>
+          <div class="community-bg"></div>
+          <div class="community-content">
+            <p class="kicker cream">Not ready for 1:1?</p>
+            <h2>Start with the community.</h2>
+            <p>
+              Join the Full Bloom Patreon for monthly tools, prompts and live
+              workshops. Grow at your own pace — and step into 1:1 coaching when
+              the time feels right.
+            </p>
+            <a href="https://www.patreon.com/cw/fullbloom" class="btn btn-ivory">
+              Join the community — £8/mo →
+            </a>
+          </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final-cta" data-screen-label="13 Final">
+          <div class="final-cta-overlay"></div>
+          <div class="final-cta-content">
+            <p class="kicker cream">Your move</p>
+            <h2>The next chapter doesn’t write itself.</h2>
+            <p>
+              You’ve read this far for a reason. Book the call — it costs you
+              nothing but 30 minutes, and it might change everything.
+            </p>
+            <div class="hero-actions">
+              <a href="#booking" class="btn btn-primary">
+                Book your free 30-min call →
+              </a>
+              <a href="#quiz" class="btn btn-ghost">Take the quiz instead</a>
             </div>
           </div>
         </section>
       </main>
 
-      <footer class="site-footer" id="contact">
-        <div class="footer-brand">
-          <img src="assets/images/logo-footer.png" alt="Full Bloom Coaching" />
-        </div>
-
-        <div class="footer-links">
-          <div class="footer-column">
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <a href="#">Join Patreon Community</a>
+      <footer class="site-footer" id="contact" data-screen-label="14 Footer">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="assets/images/logo-footer.png" alt="Full Bloom Coaching" />
+            <p class="footer-tag">
+              1:1 coaching for women ready to move forward with confidence.
+            </p>
           </div>
 
-          <div class="footer-column">
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">YouTube</a>
+          <div class="footer-links">
+            <div class="footer-column">
+              <p class="footer-h">Programme</p>
+              <a href="#method">The Method</a>
+              <a href="#pricing">Investment</a>
+              <a href="#faq">FAQ</a>
+            </div>
+            <div class="footer-column">
+              <p class="footer-h">About</p>
+              <a href="#about">Vivienne</a>
+              <a href="#stories">Client stories</a>
+              <a href="#community">Community</a>
+            </div>
+            <div class="footer-column">
+              <p class="footer-h">Get in touch</p>
+              <a href="#booking">Book a call</a>
+              <a href="/cdn-cgi/l/email-protection#761f1810193610031a1a141a19191b151917151e1f181158151958031d"><span class="__cf_email__" data-cfemail="d5bcbbb3ba95b3a0b9b9b7b9babab8b6bab4b6bdbcbbb2fbb6bafba0be">[email&#160;protected]</span></a>
+              <a href="#quiz">Free clarity quiz</a>
+            </div>
+            <div class="footer-column">
+              <p class="footer-h">Follow</p>
+              <a href="#">Instagram</a>
+              <a href="#">LinkedIn</a>
+              <a href="#">YouTube</a>
+            </div>
           </div>
         </div>
 
-        <div class="footer-credit">
-          <p>Website By</p>
-          <a href="#">Sage Studios</a>
+        <div class="footer-bottom">
+          <p>© 2026 Full Bloom Coaching · Vivienne Katahena</p>
+          <p>Crafted with care</p>
         </div>
       </footer>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Tweaks panel mount -->
+    <div id="tweaks-mount"></div>
+
+    <!-- Quiz modal mount -->
+    <div id="modal-mount"></div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/babel" src="tweaks-panel.jsx"></script>
+    <script type="text/babel" src="app.jsx"></script>
   </body>
 </html>
