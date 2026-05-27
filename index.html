@@ -22,13 +22,32 @@
           </a>
 
           <nav class="nav-menu">
-            <a href="#method">The Method</a>
-            <a href="#about">About Vivienne</a>
-            <a href="#stories">Stories</a>
-            <a href="#pricing">Investment</a>
-            <a href="#community">Blog</a>
-            <a href="#booking" class="nav-cta">Book free call →</a>
-          </nav>
+  <a href="#method">The Method</a>
+  <a href="#about">About Vivienne</a>
+  <a href="#stories">Stories</a>
+  <a href="#pricing">Investment</a>
+  <a href="#community">Blog</a>
+  <a href="#booking" class="nav-cta">Book free call →</a>
+</nav>
+
+<button class="mobile-menu-toggle" type="button" aria-label="Open menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<div class="mobile-menu-panel">
+  <nav class="mobile-menu-links">
+    <a href="#method">The Method</a>
+    <a href="#about">About Vivienne</a>
+    <a href="#stories">Stories</a>
+    <a href="#pricing">Investment</a>
+    <a href="#community">Blog</a>
+  </nav>
+
+  <a href="#booking" class="mobile-menu-cta">Book free call →</a>
+</div>
+          
         </div>
       </header>
 
@@ -87,7 +106,7 @@
           <a href="#problem" class="hero-scroll" aria-label="Scroll">
             <span></span>
           </a>
-          
+
         </section>
 
         <!-- LOGO / CRED STRIP -->
@@ -645,5 +664,21 @@
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/babel" src="tweaks-panel.jsx"></script>
     <script type="text/babel" src="app.jsx"></script>
+
+    <script>
+  const menuToggle = document.querySelector(".mobile-menu-toggle");
+  const menuLinks = document.querySelectorAll(".mobile-menu-panel a");
+
+  menuToggle.addEventListener("click", () => {
+    document.body.classList.toggle("menu-open");
+  });
+
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      document.body.classList.remove("menu-open");
+    });
+  });
+</script>
+
   </body>
 </html>
