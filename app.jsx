@@ -279,7 +279,7 @@ function UrgencyBanner({ enabled, onClose, mode }) {
    ========================================= */
 const HERO_VARIANTS = {
   unstuck: {
-    h: "Get unstuck.<br /><em>Move forward with confidence.</em>",
+    h: "Move forward with confidence.",
     s: "A personal 12-week coaching programme for women ready to stop circling the same questions and start living the next chapter — with clarity, courage, and a coach in your corner.",
   },
   bloom: {
