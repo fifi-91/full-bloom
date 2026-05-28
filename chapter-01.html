@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflect | Full Bloom Digital Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="chapter-opener-page">
+  <header class="time-header">
+    <a href="welcome.html" class="time-logo">
+      <img src="assets/images/digital-tracker-nav-logo.svg" alt="Full Bloom Digital Tracker" />
+    </a>
+
+    <div class="tracker-user">
+      <span class="tracker-avatar">S</span>
+      <span>Sally</span>
+    </div>
+  </header>
+
+  <main class="chapter-opener-main">
+    <section>
+      <span class="chapter-bg-num">01</span>
+
+      <p class="kicker gold">Phase one</p>
+
+      <h1><em>Reflect</em></h1>
+
+      <p class="chapter-opener-sub">
+        What is, and what wants to be. The next four weeks are about looking honestly at where you are — without fixing yet.
+      </p>
+
+      <p class="chapter-countdown">
+        Continuing in <span id="countdown">8</span> seconds<span id="dots">...</span>
+      </p>
+    </section>
+  </main>
+
+  <script>
+    let seconds = 8;
+    const countdown = document.getElementById("countdown");
+
+    const timer = setInterval(() => {
+      seconds -= 1;
+      countdown.textContent = seconds;
+
+      if (seconds <= 0) {
+        clearInterval(timer);
+        window.location.href = "week-01.html";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

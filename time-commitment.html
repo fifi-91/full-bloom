@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Time Commitment | Full Bloom Digital Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="time-page">
+  <header class="time-header">
+    <a href="index.html" class="time-logo">
+      <img src="assets/images/digital-tracker-nav-logo.svg" alt="Full Bloom Digital Tracker" />
+    </a>
+
+    <div class="tracker-user">
+      <span class="tracker-avatar">S</span>
+      <span>Sally</span>
+    </div>
+  </header>
+
+  <main class="time-main">
+    <section class="time-intro">
+      <h1>
+        Time Commitment Plan
+      </h1>
+
+      <p>
+        A summary of your weekly commitment to the Full Bloom programme.
+      </p>
+    </section>
+
+    <section class="time-list">
+      <div class="time-row">
+        <h2>Weekly 1:1 session</h2>
+        <p>Fixed. Already in the diary.</p>
+        <input type="number" value="60" readonly />
+      </div>
+
+      <div class="time-row">
+        <h2>Journal time</h2>
+        <p>The work between us. Sunday or Monday tends to land best.</p>
+        <input class="time-input" type="number" placeholder="0" min="0" />
+      </div>
+
+      <div class="time-row">
+        <h2>Reflection between sessions</h2>
+        <p>A walk. A pause. A short voice note to yourself.</p>
+        <input class="time-input" type="number" placeholder="0" min="0" />
+      </div>
+
+      <div class="time-row">
+        <h2>One small weekly action</h2>
+        <p>The thing you commit to doing — 15 to 60 minutes.</p>
+        <input class="time-input" type="number" placeholder="0" min="0" />
+      </div>
+
+      <div class="time-row">
+        <h2>Reading / podcasts / optional</h2>
+        <p>Only if it serves you. Zero is a real answer.</p>
+        <input class="time-input" type="number" placeholder="0" min="0" />
+      </div>
+    </section>
+
+    <section class="time-bottom">
+      <p>
+        "Is this honest? If you would struggle to give this every week for the next twelve, lower it now."
+      </p>
+
+      <div class="time-total-wrap">
+        <span>Your weekly commitment</span>
+        <strong id="timeTotal">3h 45m</strong>
+        <a href="signature-loading.html" class="time-button">Sign and begin →</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const inputs = document.querySelectorAll(".time-row input");
+    const total = document.getElementById("timeTotal");
+
+    function updateTotal() {
+      let minutes = 0;
+
+      inputs.forEach(input => {
+        minutes += Number(input.value) || 0;
+      });
+
+      const hours = Math.floor(minutes / 60);
+      const mins = minutes % 60;
+
+      total.textContent = `${hours}h ${mins}m`;
+    }
+
+    inputs.forEach(input => {
+      input.addEventListener("input", updateTotal);
+    });
+
+    updateTotal();
+  </script>
+</body>
+</html>

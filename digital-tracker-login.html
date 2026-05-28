@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Digital Tracker Login | Full Bloom Coaching</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="tracker-login-page">
+
+  <!-- HEADER -->
+  <header class="tracker-login-header">
+    <a href="index.html" class="tracker-login-logo">
+      <img
+        src="assets/images/digital-tracker-nav-logo.svg"
+        alt="Full Bloom Digital Tracker"
+      />
+    </a>
+  </header>
+
+  <!-- MAIN -->
+  <main class="tracker-login-main">
+
+    <!-- LEFT COPY -->
+    <section class="tracker-login-copy">
+
+      <p class="kicker gold">
+        A place to track your growth
+      </p>
+
+      <h1>
+        Full Bloom Digital Tracker
+      </h1>
+
+      <p class="tracker-login-sub">
+        Your private companion to the work between sessions.
+        Sign in to find this week’s question, your past reflections,
+        and the version of you slowly arriving.
+      </p>
+
+    </section>
+
+    <!-- LOGIN CARD -->
+    <section
+      class="tracker-login-card"
+      aria-label="Digital tracker login"
+    >
+
+    <form
+    class="tracker-login-form"
+    action="loading.html"
+    >
+        <!-- EMAIL -->
+        <label for="email">
+          Email
+        </label>
+
+        <input
+          id="email"
+          type="email"
+          placeholder="Enter email address"
+          autocomplete="email"
+          required
+        />
+
+        <!-- PASSWORD -->
+        <label for="password">
+          Password
+        </label>
+
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter password"
+          autocomplete="current-password"
+          required
+        />
+
+        <!-- BUTTON -->
+        <button type="submit">
+          Enter your tracker →
+        </button>
+
+        <!-- HELP -->
+        <p class="tracker-login-help">
+          Forgotten your password?
+          <a href="mailto:info@fullbloomcoaching.co.uk">
+            Reset it here
+          </a>
+        </p>
+
+        <!-- RETURN -->
+        <a
+          href="index.html"
+          class="tracker-return-link"
+        >
+          ← Return to Full Bloom website
+        </a>
+
+      </form>
+
+    </section>
+
+  </main>
+
+<script>
+  const form = document.querySelector(".tracker-login-form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const email = document
+      .getElementById("email")
+      .value
+      .trim();
+
+    const password = document
+      .getElementById("password")
+      .value
+      .trim();
+
+    const validEmail = "info@fullbloomcoaching.co.uk";
+    const validPassword = "coach";
+
+    if (
+      email === validEmail &&
+      password === validPassword
+    ) {
+      window.location.href = "loading.html";
+    } else {
+      alert(
+        "Incorrect email or password. Please try again."
+      );
+    }
+  });
+</script>
+
+</body>
+</html>
