@@ -3366,6 +3366,216 @@ body.tracker-login-page {
   }
 }
 
+/* ===== COACH DASHBOARD ===== */
+
+.coach-dashboard-page {
+  min-height: 100vh;
+  background: #445039;
+  color: var(--cream);
+}
+
+.coach-dashboard-main {
+  width: min(1280px, calc(100% - 164px));
+  margin: 0 auto;
+  padding: 64px 0 80px;
+}
+
+.coach-dashboard-top {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+  align-items: flex-end;
+}
+
+.coach-dashboard-intro h1 {
+  font-family: "Reckless Neue", serif;
+  font-weight: 300;
+  font-size: clamp(52px, 5vw, 76px);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  color: var(--cream);
+}
+
+.coach-dashboard-intro h1 em {
+  color: var(--gold);
+}
+
+.coach-stats {
+  display: flex;
+  gap: 44px;
+}
+
+.coach-stats strong {
+  display: block;
+  font-family: "Reckless Neue", serif;
+  font-size: 42px;
+  font-weight: 300;
+  color: var(--gold);
+}
+
+.coach-stats span {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(240, 227, 209, 0.68);
+}
+
+.coach-filters {
+  margin-top: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.coach-filters button,
+.coach-status-filter {
+  min-height: 42px;
+  padding: 12px 18px;
+  border-radius: 100px;
+  border: 1px solid rgba(240, 227, 209, 0.22);
+  background: transparent;
+  color: var(--cream);
+  font-family: "Fakt Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.coach-filters button.active {
+  background: var(--cream);
+  color: #445039;
+}
+
+.coach-table {
+  margin-top: 32px;
+  border-top: 1px solid rgba(240, 227, 209, 0.14);
+}
+
+.coach-row {
+  min-height: 86px;
+  border-bottom: 1px solid rgba(240, 227, 209, 0.14);
+  display: grid;
+  grid-template-columns: 1.4fr 1.1fr 1.45fr 1.2fr 1.05fr 1fr 1.2fr 28px;
+  gap: 24px;
+  align-items: center;
+}
+
+.coach-head {
+  min-height: 48px;
+}
+
+.coach-head span {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.coach-row span,
+.coach-row a {
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(240, 227, 209, 0.74);
+}
+
+.coach-client {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.client-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: "Reckless Neue", serif;
+  font-style: italic;
+  color: var(--cream);
+  flex-shrink: 0;
+}
+
+.client-avatar.rust { background: var(--rust); }
+.client-avatar.green { background: var(--olive); }
+
+.coach-client strong {
+  font-family: "Reckless Neue", serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--cream);
+}
+
+.coach-row.unread {
+  background: rgba(240, 227, 209, 0.05);
+}
+
+@media (max-width: 1000px) {
+  .coach-dashboard-main {
+    width: calc(100% - 48px);
+  }
+
+  .coach-dashboard-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .coach-head {
+    display: none;
+  }
+
+  .coach-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 24px 0;
+  }
+
+  .coach-row > span::before {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .coach-row > span:nth-child(2)::before { content: "Focus"; }
+  .coach-row > span:nth-child(3)::before { content: "Current week"; }
+  .coach-row > span:nth-child(4)::before { content: "Last client entry"; }
+  .coach-row > span:nth-child(5)::before { content: "Next session date"; }
+  .coach-row > span:nth-child(6)::before { content: "Cohort"; }
+  .coach-row > span:nth-child(7)::before { content: "Status"; }
+}
+
+@media (max-width: 640px) {
+  .coach-dashboard-main {
+    width: calc(100% - 40px);
+    padding-top: 48px;
+  }
+
+  .coach-dashboard-intro h1 {
+    font-size: 46px;
+  }
+
+  .coach-stats {
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .coach-stats strong {
+    font-size: 34px;
+  }
+
+  .coach-filters button,
+  .coach-status-filter {
+    width: 100%;
+  }
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1100px) {
   .section-inner { width: calc(100% - 48px); }

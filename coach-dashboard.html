@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coach Dashboard | Full Bloom Digital Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="coach-dashboard-page">
+  <header class="time-header">
+    <a href="index.html" class="time-logo">
+      <img src="assets/images/digital-tracker-nav-logo.svg" alt="Full Bloom Digital Tracker" />
+    </a>
+
+    <div class="tracker-user">
+      <span class="tracker-avatar">V</span>
+      <span>Vivienne</span>
+    </div>
+  </header>
+
+  <main class="coach-dashboard-main">
+    <section class="coach-dashboard-intro">
+      <p class="kicker gold">Coach view · Vivienne</p>
+
+      <div class="coach-dashboard-top">
+        <h1>Your clients <em>this week.</em></h1>
+
+        <div class="coach-stats">
+          <div><strong>6</strong><span>Active</span></div>
+          <div><strong>2</strong><span>Unread</span></div>
+          <div><strong>3</strong><span>Sessions today</span></div>
+        </div>
+      </div>
+
+      <div class="coach-filters">
+        <button class="active">All clients</button>
+        <button>Current cohort: August 2026</button>
+        <button>November 2026</button>
+        <button>February 2027</button>
+
+        <select class="coach-status-filter" aria-label="Filter by status">
+          <option>Status: All</option>
+          <option>Read</option>
+          <option>Unread</option>
+          <option>Full Bloom journey complete</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="coach-table" aria-label="Coach client dashboard">
+      <div class="coach-row coach-head">
+        <span>Client</span>
+        <span>Focus</span>
+        <span>Current week</span>
+        <span>Last client entry</span>
+        <span>Next session date</span>
+        <span>Cohort</span>
+        <span>Status</span>
+        <span></span>
+      </div>
+
+      <div class="coach-row unread">
+        <div class="coach-client">
+          <span class="client-avatar rust">M</span>
+          <strong>Maya Olawale</strong>
+        </div>
+        <span>Career & Vocation</span>
+        <span>Week 03 · Why now?</span>
+        <span>14 minutes ago</span>
+        <span>08/08/2026</span>
+        <span>August 2026</span>
+        <span>Unread</span>
+        <a href="#">→</a>
+      </div>
+
+      <div class="coach-row">
+        <div class="coach-client">
+          <span class="client-avatar green">J</span>
+          <strong>Janine Patel</strong>
+        </div>
+        <span>Relationships</span>
+        <span>Week 03 · Why now?</span>
+        <span>2 days ago</span>
+        <span>09/08/2026</span>
+        <span>August 2026</span>
+        <span>Read</span>
+        <a href="#">→</a>
+      </div>
+
+      <div class="coach-row">
+        <div class="coach-client">
+          <span class="client-avatar green">R</span>
+          <strong>Rachel Wexford</strong>
+        </div>
+        <span>Health & Wellbeing</span>
+        <span>Week 03 · Why now?</span>
+        <span>Not yet started</span>
+        <span>10/08/2026</span>
+        <span>August 2026</span>
+        <span>Read</span>
+        <a href="#">→</a>
+      </div>
+
+      <div class="coach-row unread">
+        <div class="coach-client">
+          <span class="client-avatar rust">B</span>
+          <strong>Bola Akpan</strong>
+        </div>
+        <span>Time & Money</span>
+        <span>Week 07 · Embracing Change</span>
+        <span>4 hours ago</span>
+        <span>14/11/2026</span>
+        <span>November 2026</span>
+        <span>Unread</span>
+        <a href="#">→</a>
+      </div>
+
+      <div class="coach-row">
+        <div class="coach-client">
+          <span class="client-avatar green">H</span>
+          <strong>Helena Vyrnwy</strong>
+        </div>
+        <span>Health & Wellbeing</span>
+        <span>Week 07 · Embracing Change</span>
+        <span>1 day ago</span>
+        <span>16/11/2026</span>
+        <span>November 2026</span>
+        <span>Read</span>
+        <a href="#">→</a>
+      </div>
+
+      <div class="coach-row">
+        <div class="coach-client">
+          <span class="client-avatar green">S</span>
+          <strong>Sade Aluko</strong>
+        </div>
+        <span>Career & Vocation</span>
+        <span>Week 12 · Next Chapter</span>
+        <span>7 days ago</span>
+        <span>23/01/2027</span>
+        <span>November 2026</span>
+        <span>Full Bloom journey complete</span>
+        <a href="#">→</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

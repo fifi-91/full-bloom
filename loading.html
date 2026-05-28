@@ -19,11 +19,14 @@
     />
   </main>
 
-  <script>
-    setTimeout(function () {
-      window.location.href = "first-time-onboarding.html";
-    }, 1800);
-  </script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const nextPage = params.get("next") || "first-time-onboarding.html";
+
+  setTimeout(function () {
+    window.location.href = nextPage;
+  }, 1800);
+</script>
 
 </body>
 </html>

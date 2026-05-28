@@ -115,25 +115,24 @@
     const email = document
       .getElementById("email")
       .value
-      .trim();
+      .trim()
+      .toLowerCase();
 
     const password = document
       .getElementById("password")
       .value
       .trim();
 
-    const validEmail = "info@fullbloomcoaching.co.uk";
+    const clientEmail = "info@fullbloomcoaching.co.uk";
+    const coachEmail = "vivkatahena@gmail.com";
     const validPassword = "coach";
 
-    if (
-      email === validEmail &&
-      password === validPassword
-    ) {
-      window.location.href = "loading.html";
+    if (email === clientEmail && password === validPassword) {
+      window.location.href = "loading.html?next=first-time-onboarding.html";
+    } else if (email === coachEmail && password === validPassword) {
+      window.location.href = "loading.html?next=coach-dashboard.html";
     } else {
-      alert(
-        "Incorrect email or password. Please try again."
-      );
+      alert("Incorrect email or password. Please try again.");
     }
   });
 </script>
