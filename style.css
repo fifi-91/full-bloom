@@ -3370,156 +3370,147 @@ body.tracker-login-page {
 
 .coach-dashboard-page {
   min-height: 100vh;
-  background: #445039;
+  background:
+    radial-gradient(circle at 15% 35%, rgba(80, 94, 67, 0.9) 0%, rgba(80, 94, 67, 0) 42%),
+    radial-gradient(circle at 85% 75%, rgba(80, 95, 67, 0.85) 0%, rgba(80, 95, 67, 0) 44%),
+    #445039;
   color: var(--cream);
 }
 
 .coach-dashboard-main {
-  width: min(1280px, calc(100% - 164px));
+  width: min(1280px, calc(100% - 160px));
   margin: 0 auto;
-  padding: 64px 0 80px;
-}
-
-.coach-dashboard-top {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  gap: 48px;
-  align-items: flex-end;
+  padding: 72px 0 100px;
 }
 
 .coach-dashboard-intro h1 {
+  margin-top: 18px;
   font-family: "Reckless Neue", serif;
   font-weight: 300;
-  font-size: clamp(52px, 5vw, 76px);
+  font-size: clamp(54px, 5vw, 76px);
   line-height: 1.05;
-  letter-spacing: -0.045em;
-  color: var(--cream);
+  letter-spacing: -0.05em;
+  color: #ffffff;
 }
 
-.coach-dashboard-intro h1 em {
-  color: var(--gold);
-}
+.coach-dashboard-controls {
+  margin-top: 44px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #647157;
 
-.coach-stats {
   display: flex;
-  gap: 44px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
 }
 
-.coach-stats strong {
-  display: block;
-  font-family: "Reckless Neue", serif;
-  font-size: 42px;
-  font-weight: 300;
-  color: var(--gold);
-}
-
-.coach-stats span {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(240, 227, 209, 0.68);
-}
-
-.coach-filters {
-  margin-top: 36px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.coach-filters button,
-.coach-status-filter {
-  min-height: 42px;
-  padding: 12px 18px;
-  border-radius: 100px;
-  border: 1px solid rgba(240, 227, 209, 0.22);
-  background: transparent;
-  color: var(--cream);
-  font-family: "Fakt Pro", sans-serif;
-  font-size: 14px;
+.coach-dashboard-controls p {
+  font-size: 16px;
   font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fbf4e6;
 }
 
-.coach-filters button.active {
-  background: var(--cream);
-  color: #445039;
+.coach-dropdowns {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.coach-dropdowns label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 14px;
+  color: #9d8f73;
+}
+
+.coach-dropdowns select {
+  border: 0;
+  background: transparent;
+  color: #fbf4e6;
+  font-family: "Fakt Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+}
+
+.coach-dropdowns option {
+  color: #1d1714;
 }
 
 .coach-table {
-  margin-top: 32px;
-  border-top: 1px solid rgba(240, 227, 209, 0.14);
+  margin-top: 34px;
 }
 
 .coach-row {
-  min-height: 86px;
-  border-bottom: 1px solid rgba(240, 227, 209, 0.14);
+  min-height: 76px;
+  border-bottom: 1px solid #647157;
+
   display: grid;
-  grid-template-columns: 1.4fr 1.1fr 1.45fr 1.2fr 1.05fr 1fr 1.2fr 28px;
+  grid-template-columns: 1.25fr 1.15fr 1fr 1fr 1fr 0.9fr 0.8fr 1.5fr;
   gap: 24px;
   align-items: center;
 }
 
 .coach-head {
-  min-height: 48px;
+  min-height: 54px;
 }
 
-.coach-head span {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold);
-}
-
-.coach-row span,
-.coach-row a {
-  font-size: 14px;
-  line-height: 1.4;
-  color: rgba(240, 227, 209, 0.74);
-}
-
-.coach-client {
-  display: flex;
+.coach-head button {
+  display: inline-flex;
   align-items: center;
-  gap: 14px;
+  gap: 6px;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #90bf80;
+
+  text-align: left;
+  cursor: pointer;
 }
 
-.client-avatar {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-family: "Reckless Neue", serif;
-  font-style: italic;
-  color: var(--cream);
-  flex-shrink: 0;
+.coach-head button img {
+  width: 12px;
+  height: 12px;
 }
 
-.client-avatar.rust { background: var(--rust); }
-.client-avatar.green { background: var(--olive); }
-
-.coach-client strong {
-  font-family: "Reckless Neue", serif;
-  font-size: 22px;
-  font-weight: 400;
-  color: var(--cream);
+.coach-row span {
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: -0.011em;
+  color: #eee3d2;
 }
 
-.coach-row.unread {
-  background: rgba(240, 227, 209, 0.05);
+.coach-row span:first-child {
+  color: #cbe6c1;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .coach-dashboard-main {
     width: calc(100% - 48px);
   }
 
-  .coach-dashboard-top {
+  .coach-dashboard-controls {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .coach-dropdowns {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .coach-dropdowns label,
+  .coach-dropdowns select {
+    width: 100%;
   }
 
   .coach-head {
@@ -3532,47 +3523,35 @@ body.tracker-login-page {
     padding: 24px 0;
   }
 
-  .coach-row > span::before {
+  .coach-row span::before {
     display: block;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
+
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: #90bf80;
   }
 
-  .coach-row > span:nth-child(2)::before { content: "Focus"; }
-  .coach-row > span:nth-child(3)::before { content: "Current week"; }
-  .coach-row > span:nth-child(4)::before { content: "Last client entry"; }
-  .coach-row > span:nth-child(5)::before { content: "Next session date"; }
-  .coach-row > span:nth-child(6)::before { content: "Cohort"; }
-  .coach-row > span:nth-child(7)::before { content: "Status"; }
+  .coach-row span:nth-child(1)::before { content: "Client name"; }
+  .coach-row span:nth-child(2)::before { content: "Focus"; }
+  .coach-row span:nth-child(3)::before { content: "Current week"; }
+  .coach-row span:nth-child(4)::before { content: "Last entry"; }
+  .coach-row span:nth-child(5)::before { content: "Next session"; }
+  .coach-row span:nth-child(6)::before { content: "Cohort"; }
+  .coach-row span:nth-child(7)::before { content: "Status"; }
+  .coach-row span:nth-child(8)::before { content: "Actions"; }
 }
 
 @media (max-width: 640px) {
   .coach-dashboard-main {
     width: calc(100% - 40px);
-    padding-top: 48px;
+    padding: 48px 0 72px;
   }
 
   .coach-dashboard-intro h1 {
-    font-size: 46px;
-  }
-
-  .coach-stats {
-    width: 100%;
-    justify-content: space-between;
-    gap: 20px;
-  }
-
-  .coach-stats strong {
-    font-size: 34px;
-  }
-
-  .coach-filters button,
-  .coach-status-filter {
-    width: 100%;
+    font-size: 50px;
   }
 }
 

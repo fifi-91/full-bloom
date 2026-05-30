@@ -22,128 +22,163 @@
   <main class="coach-dashboard-main">
     <section class="coach-dashboard-intro">
       <p class="kicker gold">Coach view · Vivienne</p>
+      <h1>Your clients</h1>
 
-      <div class="coach-dashboard-top">
-        <h1>Your clients <em>this week.</em></h1>
+      <div class="coach-dashboard-controls">
+        <p>Current cohort: Aug 2026</p>
 
-        <div class="coach-stats">
-          <div><strong>6</strong><span>Active</span></div>
-          <div><strong>2</strong><span>Unread</span></div>
-          <div><strong>3</strong><span>Sessions today</span></div>
+        <div class="coach-dropdowns">
+          <label>
+            Sort by:
+            <select id="sortSelect">
+              <option value="none">All</option>
+              <option value="client">Client name</option>
+              <option value="focus">Focus</option>
+              <option value="week">Current week</option>
+              <option value="entry">Last entry</option>
+              <option value="session">Next session</option>
+              <option value="cohort">Cohort</option>
+              <option value="status">Status</option>
+              <option value="action">Actions</option>
+            </select>
+          </label>
+
+          <label>
+            Status:
+            <select id="statusFilter">
+              <option value="all">All</option>
+              <option value="read">Read</option>
+              <option value="unread">Unread</option>
+              <option value="graduated">Client graduated</option>
+            </select>
+          </label>
+
+          <label>
+            Actions:
+            <select id="actionFilter">
+              <option value="all">All</option>
+              <option value="send prompt">Send client prompt to enter</option>
+              <option value="no action">No action required</option>
+              <option value="read entry">Read entry</option>
+            </select>
+          </label>
         </div>
-      </div>
-
-      <div class="coach-filters">
-        <button class="active">All clients</button>
-        <button>Current cohort: August 2026</button>
-        <button>November 2026</button>
-        <button>February 2027</button>
-
-        <select class="coach-status-filter" aria-label="Filter by status">
-          <option>Status: All</option>
-          <option>Read</option>
-          <option>Unread</option>
-          <option>Full Bloom journey complete</option>
-        </select>
       </div>
     </section>
 
     <section class="coach-table" aria-label="Coach client dashboard">
       <div class="coach-row coach-head">
-        <span>Client</span>
-        <span>Focus</span>
-        <span>Current week</span>
-        <span>Last client entry</span>
-        <span>Next session date</span>
-        <span>Cohort</span>
-        <span>Status</span>
-        <span></span>
+        <button data-sort="client">Client name <img src="assets/images/sort-icon.svg" alt="" /></button>
+        <button data-sort="focus">Focus <img src="assets/images/sort-icon.svg" alt="" /></button>
+        <button data-sort="week">Current week <img src="assets/images/sort-icon.svg" alt="" /></button>
+        <button data-sort="entry">Last entry <img src="assets/images/sort-icon.svg" alt="" /></button>
+        <button data-sort="session">Next session <img src="assets/images/sort-icon.svg" alt="" /></button>
+        <button data-sort="cohort">Cohort <img src="assets/images/sort-icon.svg" alt="" /></button>
+        <button data-sort="status">Status <img src="assets/images/sort-icon.svg" alt="" /></button>
+        <button data-sort="action">Actions <img src="assets/images/sort-icon.svg" alt="" /></button>
       </div>
 
-      <div class="coach-row unread">
-        <div class="coach-client">
-          <span class="client-avatar rust">M</span>
-          <strong>Maya Olawale</strong>
+      <div class="coach-table-body" id="coachTableBody">
+        <div class="coach-row" data-client="Maya Olawale" data-focus="Career & Vocation" data-week="Week 3" data-entry="6 days ago" data-session="16/06/2026" data-cohort="May 2026" data-status="Read" data-action="Send client prompt to enter">
+          <span>Maya Olawale</span>
+          <span>Career & Vocation</span>
+          <span>Week 3</span>
+          <span>6 days ago</span>
+          <span>16/06/2026</span>
+          <span>May 2026</span>
+          <span>Read</span>
+          <span>✉ Send client prompt to enter</span>
         </div>
-        <span>Career & Vocation</span>
-        <span>Week 03 · Why now?</span>
-        <span>14 minutes ago</span>
-        <span>08/08/2026</span>
-        <span>August 2026</span>
-        <span>Unread</span>
-        <a href="#">→</a>
-      </div>
 
-      <div class="coach-row">
-        <div class="coach-client">
-          <span class="client-avatar green">J</span>
-          <strong>Janine Patel</strong>
+        <div class="coach-row" data-client="Janine Patel" data-focus="Relationships" data-week="Week 8" data-entry="2 minutes ago" data-session="01/06/2026" data-cohort="May 2026" data-status="Unread" data-action="No action required">
+          <span>Janine Patel</span>
+          <span>Relationships</span>
+          <span>Week 8</span>
+          <span>2 minutes ago</span>
+          <span>01/06/2026</span>
+          <span>May 2026</span>
+          <span>Unread</span>
+          <span>♡ No action required</span>
         </div>
-        <span>Relationships</span>
-        <span>Week 03 · Why now?</span>
-        <span>2 days ago</span>
-        <span>09/08/2026</span>
-        <span>August 2026</span>
-        <span>Read</span>
-        <a href="#">→</a>
-      </div>
 
-      <div class="coach-row">
-        <div class="coach-client">
-          <span class="client-avatar green">R</span>
-          <strong>Rachel Wexford</strong>
+        <div class="coach-row" data-client="Janine Patel" data-focus="Time & Money freedom" data-week="Week 9" data-entry="3 days ago" data-session="12/06/2026" data-cohort="May 2026" data-status="Unread" data-action="Read entry">
+          <span>Janine Patel</span>
+          <span>Time & Money freedom</span>
+          <span>Week 9</span>
+          <span>3 days ago</span>
+          <span>12/06/2026</span>
+          <span>May 2026</span>
+          <span>Unread</span>
+          <span>▣ Read entry</span>
         </div>
-        <span>Health & Wellbeing</span>
-        <span>Week 03 · Why now?</span>
-        <span>Not yet started</span>
-        <span>10/08/2026</span>
-        <span>August 2026</span>
-        <span>Read</span>
-        <a href="#">→</a>
-      </div>
 
-      <div class="coach-row unread">
-        <div class="coach-client">
-          <span class="client-avatar rust">B</span>
-          <strong>Bola Akpan</strong>
+        <div class="coach-row" data-client="Janine Patel" data-focus="Health & Wellbeing" data-week="Week 1" data-entry="1 minute ago" data-session="12/06/2026" data-cohort="May 2026" data-status="Unread" data-action="Read entry">
+          <span>Janine Patel</span>
+          <span>Health & Wellbeing</span>
+          <span>Week 1</span>
+          <span>1 minute ago</span>
+          <span>12/06/2026</span>
+          <span>May 2026</span>
+          <span>Unread</span>
+          <span>▣ Read entry</span>
         </div>
-        <span>Time & Money</span>
-        <span>Week 07 · Embracing Change</span>
-        <span>4 hours ago</span>
-        <span>14/11/2026</span>
-        <span>November 2026</span>
-        <span>Unread</span>
-        <a href="#">→</a>
-      </div>
-
-      <div class="coach-row">
-        <div class="coach-client">
-          <span class="client-avatar green">H</span>
-          <strong>Helena Vyrnwy</strong>
-        </div>
-        <span>Health & Wellbeing</span>
-        <span>Week 07 · Embracing Change</span>
-        <span>1 day ago</span>
-        <span>16/11/2026</span>
-        <span>November 2026</span>
-        <span>Read</span>
-        <a href="#">→</a>
-      </div>
-
-      <div class="coach-row">
-        <div class="coach-client">
-          <span class="client-avatar green">S</span>
-          <strong>Sade Aluko</strong>
-        </div>
-        <span>Career & Vocation</span>
-        <span>Week 12 · Next Chapter</span>
-        <span>7 days ago</span>
-        <span>23/01/2027</span>
-        <span>November 2026</span>
-        <span>Full Bloom journey complete</span>
-        <a href="#">→</a>
       </div>
     </section>
   </main>
+
+  <script>
+    const tableBody = document.getElementById("coachTableBody");
+    const rows = Array.from(tableBody.querySelectorAll(".coach-row"));
+    const sortButtons = document.querySelectorAll("[data-sort]");
+    const sortSelect = document.getElementById("sortSelect");
+    const statusFilter = document.getElementById("statusFilter");
+    const actionFilter = document.getElementById("actionFilter");
+
+    let sortDirection = 1;
+
+    function sortRows(key) {
+      if (key === "none") return;
+
+      const sortedRows = [...rows].sort((a, b) => {
+        const aValue = a.dataset[key].toLowerCase();
+        const bValue = b.dataset[key].toLowerCase();
+
+        return aValue.localeCompare(bValue, "en", { numeric: true }) * sortDirection;
+      });
+
+      sortDirection *= -1;
+
+      sortedRows.forEach(row => tableBody.appendChild(row));
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const statusValue = statusFilter.value;
+      const actionValue = actionFilter.value;
+
+      rows.forEach(row => {
+        const rowStatus = row.dataset.status.toLowerCase();
+        const rowAction = row.dataset.action.toLowerCase();
+
+        const statusMatch = statusValue === "all" || rowStatus === statusValue;
+        const actionMatch = actionValue === "all" || rowAction.includes(actionValue);
+
+        row.style.display = statusMatch && actionMatch ? "grid" : "none";
+      });
+    }
+
+    sortButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        sortRows(button.dataset.sort);
+      });
+    });
+
+    sortSelect.addEventListener("change", () => {
+      sortRows(sortSelect.value);
+    });
+
+    statusFilter.addEventListener("change", applyFilters);
+    actionFilter.addEventListener("change", applyFilters);
+  </script>
 </body>
 </html>
