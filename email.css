@@ -1,0 +1,588 @@
+/* ============================================================
+   Full Bloom Coaching · shared email styles
+   Folder structure expected:
+   full-bloom/
+   ├─ emails/
+   │  ├─ email.css
+   │  ├─ template-1-editorial.html
+   │  ├─ template-2-personal-note.html
+   │  └─ template-3-structured.html
+   └─ assets/
+      ├─ images/
+      │  ├─ full-bloom-email-head.jpg
+      │  ├─ logo-dark.png
+      │  ├─ FBC-Logo-nav.png
+      │  └─ example-icon.png
+      └─ fonts/
+   ============================================================ */
+
+@font-face {
+  font-family: "Reckless Neue";
+  src: url("../assets/fonts/RecklessNeue-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Reckless Neue";
+  src: url("../assets/fonts/RecklessNeue-BookItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fakt Pro";
+  src: url("../assets/fonts/FaktPro-Normal.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fakt Pro";
+  src: url("../assets/fonts/FaktPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --page: #fbf4e6;
+  --card: #ffffff;
+  --green: #4c5f3f;
+  --green-dark: #4c5f3d;
+  --green-soft: #83a16b;
+  --green-pale: #b2d7a5;
+  --cream: #eee3d2;
+  --cream-logo: #f3ead2;
+  --gold: #b78138;
+  --sand: #e4cba7;
+  --taupe: #957b55;
+  --rust: #ab613b;
+  --wine: #400c1e;
+  --text: #545454;
+  --ink: #2a2018;
+  --rule: rgba(74, 63, 56, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #cdc4ad;
+  color: var(--ink);
+  font-family: "Fakt Pro", "Helvetica Neue", Arial, sans-serif;
+  padding: 48px 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+.email-preview-meta {
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto 12px;
+  padding: 12px 16px;
+  background: #ffffff;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 140%;
+  border-left: 3px solid var(--rust);
+  box-shadow: 0 8px 24px rgba(42, 32, 24, 0.08);
+}
+
+.email-preview-meta p {
+  margin: 0;
+}
+
+.email-preview-meta strong {
+  color: var(--rust);
+  font-weight: 500;
+}
+
+.email-shell {
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--page);
+  box-shadow: 0 24px 60px rgba(42, 32, 24, 0.18);
+}
+
+.email-masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 94px;
+  padding: 24px 40px;
+  background: var(--green-dark);
+}
+
+.email-logo {
+  display: block;
+  width: auto;
+  height: 44px;
+}
+
+.email-label {
+  color: var(--green-soft);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.17em;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.email-hero {
+  min-height: 292px;
+  padding: 72px 40px 70px;
+  background-image: linear-gradient(
+      120deg,
+      rgba(20, 30, 14, 0.66),
+      rgba(28, 42, 20, 0.28) 56%,
+      rgba(16, 24, 12, 0.70)
+    ),
+    url("../assets/images/full-bloom-email-head.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.email-hero--structured {
+  min-height: 220px;
+  padding: 48px 40px;
+}
+
+.email-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 10px;
+}
+
+.email-eyebrow img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.email-eyebrow span {
+  color: var(--green-pale);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.email-hero-title {
+  max-width: 454px;
+  margin: 0;
+  color: var(--cream);
+  font-family: "Reckless Neue", Georgia, serif;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 120%;
+  letter-spacing: -0.051em;
+}
+
+.email-hero-title em {
+  font-style: italic;
+}
+
+.email-badge-wrap {
+  position: relative;
+  z-index: 2;
+  height: 0;
+}
+
+.email-badge {
+  position: absolute;
+  top: -42px;
+  display: grid;
+  width: 84px;
+  height: 84px;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--sand);
+}
+
+.email-badge--centre {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.email-badge--right {
+  right: 40px;
+}
+
+.email-badge img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.email-note-intro {
+  padding: 56px 40px 52px;
+  background: var(--page);
+}
+
+.email-note-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.email-note-eyebrow img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.email-note-eyebrow span {
+  color: var(--rust);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.email-note-title {
+  max-width: 480px;
+  margin: 0;
+  color: var(--green-dark);
+  font-family: "Reckless Neue", Georgia, serif;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 112%;
+  letter-spacing: -0.051em;
+}
+
+.email-card {
+  background: var(--card);
+  padding: 40px 38px 44px;
+}
+
+.email-card--editorial {
+  margin: 24px 0 24px 24px;
+}
+
+.email-card--structured {
+  margin: 24px;
+}
+
+.email-card--personal {
+  margin: 0 24px 24px;
+  padding: 56px 48px 80px;
+}
+
+.email-card p,
+.email-card h2 {
+  margin-top: 0;
+}
+
+.email-greeting {
+  margin-bottom: 22px;
+  color: #000000;
+  font-family: "Reckless Neue", Georgia, serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 120%;
+  letter-spacing: -0.051em;
+}
+
+.email-copy {
+  margin-bottom: 18px;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.031em;
+}
+
+.email-kicker {
+  margin-bottom: 12px;
+  color: var(--rust);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.email-card-title {
+  margin-bottom: 16px;
+  color: var(--green-dark);
+  font-family: "Reckless Neue", Georgia, serif;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 112%;
+  letter-spacing: -0.04em;
+}
+
+.email-pullquote {
+  display: flex;
+  gap: 25px;
+  margin: 32px 0;
+}
+
+.email-pullquote::before {
+  display: block;
+  width: 2px;
+  min-width: 2px;
+  background: var(--rust);
+  content: "";
+}
+
+.email-pullquote p {
+  margin: 0;
+  color: var(--rust);
+  font-family: "Reckless Neue", Georgia, serif;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 120%;
+  letter-spacing: -0.051em;
+}
+
+.email-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 248px;
+  min-height: 54px;
+  margin-top: 8px;
+  padding: 16px 32px;
+  border-radius: 4px;
+  background: var(--green);
+  color: var(--cream);
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  text-decoration: none;
+}
+
+.email-button--rust {
+  background: var(--rust);
+}
+
+.email-note {
+  padding-top: 16px;
+  margin: 18px 0 16px;
+  color: var(--green);
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: -0.031em;
+}
+
+.email-close {
+  margin: 30px 0 8px;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -0.031em;
+}
+
+.email-signature {
+  margin: 0;
+  color: var(--rust);
+  font-family: "Reckless Neue", Georgia, serif;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 120%;
+  letter-spacing: -0.051em;
+}
+
+.email-panel {
+  margin: 24px 0;
+  padding: 18px 22px;
+  border-left: 3px solid var(--green);
+  border-radius: 0 6px 6px 0;
+  background: rgba(76, 95, 63, 0.08);
+}
+
+.email-panel-label {
+  margin-bottom: 7px;
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.email-panel-question {
+  margin: 0;
+  color: var(--green);
+  font-family: "Reckless Neue", Georgia, serif;
+  font-size: 19px;
+  font-style: italic;
+  line-height: 135%;
+}
+
+.email-personal-panel {
+  margin: 36px 0;
+  padding: 28px 30px;
+  border-left: 3px solid var(--rust);
+  border-radius: 0 8px 8px 0;
+  background: rgba(171, 97, 59, 0.08);
+}
+
+.email-personal-panel-label {
+  margin: 0 0 10px;
+  color: var(--rust);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.email-personal-panel-question {
+  margin: 0;
+  color: var(--rust);
+  font-family: "Reckless Neue", Georgia, serif;
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 130%;
+  letter-spacing: -0.04em;
+}
+
+.email-steps {
+  margin: 22px 0;
+}
+
+.email-step {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 15px;
+  padding: 15px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.email-step:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.email-step-icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+}
+
+.email-step-title {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--ink);
+  font-family: "Reckless Neue", Georgia, serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+}
+
+.email-step-copy {
+  margin: 0;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+}
+
+.email-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 30px 40px 34px;
+  background: var(--wine);
+  text-align: center;
+}
+
+.email-footer-logo {
+  display: block;
+  width: auto;
+  height: 40px;
+}
+
+.email-footer-tag {
+  margin: 0;
+  color: #d6b88c;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+}
+
+.email-footer-link {
+  color: var(--cream);
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 0;
+  }
+
+  .email-preview-meta {
+    margin-bottom: 0;
+    border-left: 0;
+    box-shadow: none;
+  }
+
+  .email-shell {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .email-masthead,
+  .email-hero,
+  .email-note-intro,
+  .email-footer {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  .email-hero-title {
+    font-size: 40px;
+  }
+
+  .email-note-title {
+    font-size: 36px;
+  }
+
+  .email-card {
+    padding: 36px 28px 40px;
+  }
+
+  .email-card--editorial,
+  .email-card--structured,
+  .email-card--personal {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+
+  .email-card--personal {
+    padding-bottom: 64px;
+  }
+}

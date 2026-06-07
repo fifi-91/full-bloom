@@ -1,0 +1,107 @@
+/* ============================================================
+   FULL BLOOM · EMAIL TEMPLATES — shared stylesheet
+   Used by all 3 templates. Edit colours/fonts here once.
+   Font + image paths assume this structure:
+     /emails/email.css        <- this file
+     /emails/template-*.html
+     /assets/fonts/...
+     /assets/images/fbc-logo-nav.png
+   Adjust the url(...) paths below if your folders differ.
+   ============================================================ */
+
+@font-face { font-family: "Reckless Neue"; src: url("../assets/fonts/RecklessNeue-Light.woff") format("woff"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Reckless Neue"; src: url("../assets/fonts/RecklessNeue-Book.woff") format("woff"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Reckless Neue"; src: url("../assets/fonts/RecklessNeue-BookItalic.woff") format("woff"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Fakt Pro"; src: url("../assets/fonts/FaktPro-Normal.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Fakt Pro"; src: url("../assets/fonts/FaktPro-Medium.ttf") format("truetype"); font-weight: 500; font-display: swap; }
+
+:root {
+  --cream: #fbf4e6;          /* page / frame bg */
+  --white: #ffffff;          /* message card */
+  --olive-mast: #4c5f3d;     /* masthead */
+  --olive-btn: #4c5f3f;      /* button + band + session note */
+  --logo-cream: #f3ead2;
+  --nav-green: #83a16b;      /* "the programme" label */
+  --eyebrow-green: #b2d7a5;
+  --gold-line: #b78138;
+  --badge-bg: #e4cba7;
+  --badge-ico: #957b55;
+  --head-cream: #eee3d2;
+  --body-grey: #545454;
+  --rust: #ab613b;
+  --wine: #400c1e;
+  --foot-tag: #d6b88c;
+  --ink: #2a2018; --rule: rgba(74,63,56,0.12);
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: #cdc4ad; font-family: "Fakt Pro","Helvetica Neue",Arial,sans-serif; color: var(--ink); -webkit-font-smoothing: antialiased; padding: 48px 16px; display: flex; justify-content: center; }
+
+/* ===== email frame ===== */
+.email { width: 600px; max-width: 100%; background: var(--cream); overflow: hidden; box-shadow: 0 24px 60px rgba(42,32,24,0.18); }
+
+/* masthead */
+.mast { height: 94px; background: var(--olive-mast); display: flex; align-items: center; justify-content: space-between; padding: 24px 40px; }
+.mast img { height: 44px; width: auto; display: block; }
+.mast .nav { font-size: 12px; letter-spacing: 0.17em; text-transform: uppercase; color: var(--nav-green); }
+
+/* hero image band */
+.hero { position: relative; min-height: 292px; padding: 56px 40px 64px; display: flex; flex-direction: column; justify-content: center; gap: 18px;
+  background-image: linear-gradient(120deg, rgba(20,30,14,0.62), rgba(28,42,20,0.32) 55%, rgba(16,24,12,0.66)), url("../assets/images/full-bloom-email-head.jpg");
+  background-size: cover; background-position: center; }
+.hero .eyebrow-row { display: flex; align-items: center; gap: 12px; }
+.hero .eyebrow-row .ico { width: 30px; height: 30px; flex: none; }
+.hero .eyebrow-row span { font-size: 12px; letter-spacing: 0.17em; text-transform: uppercase; color: var(--eyebrow-green); font-weight: 500; }
+.hero .hhead { font-family: "Reckless Neue", serif; font-weight: 300; font-size: 46px; line-height: 1.18; letter-spacing: -0.04em; color: var(--head-cream); margin: 0; max-width: 470px; }
+.hero .hhead em { font-style: italic; color: var(--head-cream); }
+
+/* gold badge straddling */
+.badge-wrap { height: 0; position: relative; z-index: 5; }
+.badge { position: absolute; width: 84px; height: 84px; border-radius: 50%; background: var(--badge-bg); display: grid; place-items: center; top: -42px; box-shadow: 0 8px 20px rgba(42,32,24,0.22); }
+.badge.bc { left: 258px; }      /* near-centre, Editorial */
+.badge.bl { left: 40px; }       /* left, Personal */
+.badge.br { right: 40px; }      /* right, Structured */
+.badge svg { width: 50px; height: 50px; }
+
+/* message card */
+.card { background: var(--white); padding: 40px 38px 44px; }
+.card.flush-right { margin: 24px 0 24px 24px; }   /* left gutter only — right flush */
+.card.flush-left  { margin: 24px 24px 24px 0; }   /* right gutter only — left flush */
+.card.inset       { margin: 24px; }
+
+.c-greet { font-family: "Reckless Neue", serif; font-weight: 300; font-size: 24px; line-height: 1.2; letter-spacing: -0.05em; color: #000; margin: 0 0 22px; }
+.c-p { font-size: 16px; line-height: 1.4; letter-spacing: -0.03em; color: var(--body-grey); margin: 0 0 18px; }
+.c-p strong { color: var(--ink); font-weight: 500; }
+
+.c-pull { display: flex; align-items: stretch; gap: 25px; margin: 28px 0; }
+.c-pull .bar { width: 2px; background: var(--rust); flex: none; }
+.c-pull .qt { font-family: "Reckless Neue", serif; font-style: italic; font-weight: 300; font-size: 30px; line-height: 1.2; letter-spacing: -0.05em; color: var(--rust); margin: 0; }
+
+.c-btn { display: inline-flex; align-items: center; justify-content: center; background: var(--olive-btn); color: var(--head-cream); text-decoration: none; font-size: 16px; letter-spacing: -0.01em; padding: 16px 32px; border-radius: 4px; margin: 8px 0 0; }
+.c-btn.rust { background: var(--rust); }
+.c-note { font-size: 12px; line-height: 1.4; letter-spacing: -0.03em; color: var(--olive-btn); margin: 18px 0 0; }
+.c-note a { color: var(--olive-btn); }
+.c-close { font-size: 16px; line-height: 1.4; letter-spacing: -0.03em; color: var(--body-grey); margin: 30px 0 8px; }
+.c-sign { font-family: "Reckless Neue", serif; font-style: italic; font-weight: 300; font-size: 32px; line-height: 1.2; letter-spacing: -0.05em; color: var(--rust); margin: 0; }
+
+/* structured: kicker + headline + steps + panel */
+.c-kicker { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rust); font-weight: 600; margin: 0 0 12px; }
+.c-hero-h { font-family: "Reckless Neue", serif; font-weight: 300; font-size: 30px; line-height: 1.12; letter-spacing: -0.03em; color: var(--olive-mast); margin: 0 0 16px; }
+.steps { margin: 22px 0; }
+.step { display: grid; grid-template-columns: 40px 1fr; gap: 15px; padding: 15px 0; border-top: 1px solid var(--rule); align-items: start; }
+.step:last-child { border-bottom: 1px solid var(--rule); }
+.step .sb { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--gold-line); display: grid; place-items: center; }
+.step b { display: block; font-family: "Reckless Neue", serif; font-weight: 400; font-size: 17px; color: var(--ink); margin-bottom: 2px; letter-spacing: -0.01em; }
+.step p { font-size: 13.5px; line-height: 1.5; color: var(--body-grey); margin: 0; }
+.panel { background: rgba(76,95,62,0.08); border-left: 3px solid var(--olive-btn); border-radius: 0 6px 6px 0; padding: 18px 22px; margin: 22px 0; }
+.panel .lbl { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--olive-btn); font-weight: 600; margin: 0 0 7px; }
+.panel .q { font-family: "Reckless Neue", serif; font-style: italic; font-size: 19px; color: var(--olive-btn); line-height: 1.35; margin: 0; }
+
+/* slim header (personal note) */
+.slim { padding: 28px 40px 0; }
+.slim img { height: 30px; width: auto; opacity: 0.95; }
+
+/* footer */
+.foot { background: var(--wine); padding: 30px 40px 34px; display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+.foot img { height: 40px; width: auto; opacity: 0.92; }
+.foot .tag { font-size: 14px; letter-spacing: -0.02em; color: var(--foot-tag); margin: 0; }
+.foot .url { font-size: 14px; letter-spacing: -0.02em; color: var(--head-cream); text-decoration: underline; }
