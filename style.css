@@ -299,18 +299,26 @@ em { font-style: italic; }
   overflow: hidden;
   isolation: isolate;
 }
-.hero-bg {
-  position: absolute; inset: 0;
-  background-image: url("assets/images/Homepage-hero.jpg");
-  background-size: cover;
-  background-position: center 30%;
-  filter: saturate(1.05) contrast(1.02);
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
+
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
 .hero-overlay {
-  position: absolute; inset: 0;
-  background:
-    linear-gradient(90deg, rgba(26, 14, 8, 0.42) 0%, rgba(26, 14, 8, 0.2) 42%, rgba(26, 14, 8, 0.12) 100%),
-    linear-gradient(180deg, rgba(26, 14, 8, 0.16) 0%, rgba(26, 14, 8, 0.24) 100%);
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: rgba(26, 14, 8, 0.438);
 }
 
 .hero-inner {
@@ -411,7 +419,7 @@ em { font-style: italic; }
   align-items: center;
   gap: 28px;
   padding: 18px 32px;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.291);
   border: 1px solid rgba(240, 227, 209, 0.18);
   border-radius: 16px;
   backdrop-filter: blur(8px);
@@ -431,12 +439,12 @@ em { font-style: italic; }
   font-family: "Reckless Neue", serif;
   font-size: 22px;
   font-weight: 500;
-  color: #ea9e7c;
+  color: #7a381a;
   letter-spacing: -0.02em;
 }
 .trust-item span {
   font-size: 12px;
-  color: var(--cream-soft);
+  color: #433417;
   letter-spacing: 0.02em;
 }
 .trust-sep {
@@ -1772,52 +1780,119 @@ em { font-style: italic; }
 }
 
 /* ===== COMMUNITY ===== */
+
 .community {
-  position: relative;
-  min-height: 460px;
-  overflow: hidden;
-  isolation: isolate;
+  display: grid;
+  grid-template-columns: 38% 62%;
+  min-height: 700px;
+  background: #400C1E;
 }
-.community-bg {
-  position: absolute; inset: 0;
-  background-image: url("assets/images/community-group.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.community-overlay {
-  position: absolute; inset: 0;
-  background:
-    linear-gradient(90deg, rgba(26, 14, 8, 0.85) 0%, rgba(26, 14, 8, 0.5) 60%, rgba(26, 14, 8, 0.2) 100%);
-}
+
 .community-content {
-  position: relative;
-  z-index: 2;
-  max-width: 1240px;
-  min-height: 460px;
-  margin: 0 auto;
-  padding: 100px 80px;
+  grid-column: 1;
+  grid-row: 1;
+
+  background: #400C1E;
+  padding: 96px 72px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 16px;
-  max-width: 720px;
-  margin-left: max(48px, calc((100vw - 1240px) / 2 + 0px));
+  align-items: flex-start;
 }
+
+.community-content .kicker {
+  margin-bottom: 12px;
+}
+
 .community-content h2 {
   font-family: "Reckless Neue", serif;
   font-weight: 300;
-  font-size: clamp(40px, 4.6vw, 60px);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
+  font-size: clamp(56px, 5vw, 76px);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
   color: var(--cream);
+  margin-bottom: 24px;
+  max-width: 520px;
 }
+
 .community-content p {
-  font-size: 18px;
-  line-height: 1.6;
   color: var(--cream-soft);
-  max-width: 580px;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 500px;
+  margin-bottom: 40px;
 }
-.community-content .btn-ivory { width: fit-content; margin-top: 14px; }
+
+.community-content .btn-ivory {
+  width: fit-content;
+}
+
+.community-image {
+  grid-column: 2;
+  grid-row: 1;
+
+  background-image: url("assets/images/Patreon-homepage.jpg");
+  background-size: cover;
+  background-position: center center;
+  min-height: 700px;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 900px) {
+
+  .community {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .community-image {
+    order: 1;
+    min-height: 360px;
+    background-position: center;
+  }
+
+  .community-content {
+    order: 2;
+    padding: 56px 32px;
+  }
+
+  .community-content h2 {
+    font-size: 52px;
+    max-width: 100%;
+  }
+
+  .community-content p {
+    font-size: 18px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .community-image {
+    min-height: 280px;
+  }
+
+  .community-content {
+    padding: 48px 24px;
+  }
+
+  .community-content h2 {
+    font-size: 42px;
+    line-height: 1;
+  }
+
+  .community-content p {
+    font-size: 17px;
+  }
+
+  .community-content .btn-ivory {
+    width: 100%;
+    justify-content: center;
+  }
+}
 
 /* ===== FINAL CTA ===== */
 .final-cta {
