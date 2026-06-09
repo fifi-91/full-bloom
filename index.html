@@ -433,22 +433,12 @@
               data-url="https://calendly.com/fullbloomcoaching-info/full-bloom-discovery-call?hide_event_type_details=1&hide_gdpr_banner=1"
             ></div>
 
-            <!-- Calendly placeholder fallback (in case the iframe doesn't render) -->
-            <div class="cal-fallback">
-              <div class="cal-fb-head">
-                <span class="cal-dot"></span>
-                <span>Spring/Summer cohort · Mon 9 June 2026 · booking now</span>
+            <div class="cal-loading" aria-hidden="true">
+              <div class="cal-loading-card">
+                <span class="cal-loading-dot"></span>
+                <p class="cal-loading-title">Loading Vivienne’s calendar</p>
+                <p class="cal-loading-copy">A few available discovery call times will appear here in a moment.</p>
               </div>
-              <p class="cal-fb-title">Full Bloom Discovery Call</p>
-              <p class="cal-fb-meta">30 min · Zoom · Free</p>
-              <div class="cal-fb-cal">
-                <div class="cal-day"><span class="d">MON</span><span class="n">04</span></div>
-                <div class="cal-day"><span class="d">TUE</span><span class="n">05</span><i class="dot-avail"></i></div>
-                <div class="cal-day"><span class="d">WED</span><span class="n">06</span><i class="dot-avail"></i></div>
-                <div class="cal-day"><span class="d">THU</span><span class="n">07</span></div>
-                <div class="cal-day"><span class="d">FRI</span><span class="n">08</span><i class="dot-avail"></i></div>
-              </div>
-              <p class="cal-fb-note">Live booking widget loads here</p>
             </div>
           </div>
         </section>
@@ -464,31 +454,21 @@
             <p class="kicker">The investment</p>
             <h2>One programme. Three ways to pay.</h2>
             <p class="pricing-sub">
-              The full 12-week programme is <strong>£1,500</strong> — well below
-              the UK average for premium 1:1 coaching (typically £3,000–£5,000).
-              Choose the payment plan that works for you.
+              The full 12-week programme is <strong>£1,500</strong>. Payment links are
+              shared privately after your discovery call, once Vivienne has confirmed
+              the programme is the right fit for you.
             </p>
 
-            <div class="pricing-wedge">
-              <span class="wedge-flag">Start small</span>
-              <div class="wedge-copy">
-                <h3>The £150 Clarity Session</h3>
-                <p>
-                  Not ready for the full programme? Start with a single
-                  90-minute deep-dive. You leave with a written 3-month plan
-                  for your priority pillar — and full credit toward the
-                  programme if you decide to continue within 30 days.
-                </p>
-                <ul class="wedge-bullets">
-                  <li>90-minute 1:1 session on Zoom</li>
-                  <li>Written 3-month action plan, sent within 48hrs</li>
-                  <li>£150 credited to the full programme if you continue</li>
-                </ul>
+            <div class="pricing-private-note">
+              <span class="g-icon">♥</span>
+              <div>
+                <strong>Start with a conversation.</strong>
+                You do not need to pay before speaking with Vivienne. First, book your
+                free discovery call. If the programme feels right, you will receive the
+                next steps by email, including your agreement, payment option and time
+                planning call.
               </div>
-              <a href="https://buy.stripe.com/REPLACE_WITH_CLARITY_SESSION_LINK" target="_blank" rel="noopener" class="btn btn-ivory">Pay £150 · secure checkout →</a>
             </div>
-
-            <p class="pricing-or">— or commit to the full 12-week programme —</p>
 
             <div class="pricing-grid">
               <article class="pricing-card">
@@ -496,10 +476,10 @@
                 <h3>£1,500</h3>
                 <p class="pricing-title">paid in full</p>
                 <p class="pricing-note">
-                  Best value. Saves £100 on plan options.
+                  Best value. One payment before the programme begins.
                 </p>
-                <a href="https://buy.stripe.com/REPLACE_WITH_PAY_IN_FULL_LINK" target="_blank" rel="noopener" class="btn btn-pill">Pay £1,500 →</a>
-                <p class="pricing-secure">Secure checkout · Stripe</p>
+                <a href="#booking" class="btn btn-pill">Discuss this option →</a>
+                <p class="pricing-secure">Private payment link sent after your call</p>
               </article>
 
               <article class="pricing-card pricing-card-feature">
@@ -508,10 +488,10 @@
                 <h3>2 × £800</h3>
                 <p class="pricing-title">split payment</p>
                 <p class="pricing-note">
-                  £800 to begin · £800 by week 6.
+                  £800 to begin, then £800 by week 6.
                 </p>
-                <a href="https://buy.stripe.com/REPLACE_WITH_SPLIT_PAYMENT_LINK" target="_blank" rel="noopener" class="btn btn-pill btn-pill-dark">Pay £800 to start →</a>
-                <p class="pricing-secure">Secure checkout · Stripe</p>
+                <a href="#booking" class="btn btn-pill btn-pill-dark">Discuss this option →</a>
+                <p class="pricing-secure">Private payment link sent after your call</p>
               </article>
 
               <article class="pricing-card">
@@ -519,15 +499,15 @@
                 <h3>3 × £550</h3>
                 <p class="pricing-title">monthly</p>
                 <p class="pricing-note">
-                  £550 to begin · then weeks 4 &amp; 8.
+                  £550 to begin, then payments around weeks 4 and 8.
                 </p>
-                <a href="https://buy.stripe.com/REPLACE_WITH_MONTHLY_LINK" target="_blank" rel="noopener" class="btn btn-pill">Pay £550 to start →</a>
-                <p class="pricing-secure">Secure checkout · Stripe</p>
+                <a href="#booking" class="btn btn-pill">Discuss this option →</a>
+                <p class="pricing-secure">Private payment link sent after your call</p>
               </article>
             </div>
 
             <p class="pricing-fallback">
-              Not ready to commit? <a href="#booking">Book a free 30-min call →</a>
+              Ready to explore it? <a href="#booking">Book a free 30-min call →</a>
             </p>
 
             <div class="guarantee">
@@ -535,7 +515,7 @@
               <div>
                 <strong>The Full Bloom guarantee.</strong>
                 If after the first two sessions you feel this isn’t the right fit,
-                I’ll refund the remainder of your investment — no questions, no
+                I’ll refund the remainder of your investment, no questions and no
                 awkwardness.
               </div>
             </div>
@@ -584,7 +564,7 @@
               <a href="#booking" class="btn btn-primary">
                 Book your free 30-min call →
               </a>
-              <a href="#quiz" class="btn btn-ghost">Take the quiz instead</a>
+              <a href="https://www.patreon.com/cw/fullbloom" target="_blank" rel="noopener" class="btn btn-ghost">Join the community instead</a>
             </div>
           </div>
         </section>
@@ -616,7 +596,7 @@
               <p class="footer-h">Get in touch</p>
               <a href="#booking">Book a call</a>
               <a href="/cdn-cgi/l/email-protection#761f1810193610031a1a141a19191b151917151e1f181158151958031d"><span class="__cf_email__" data-cfemail="d5bcbbb3ba95b3a0b9b9b7b9babab8b6bab4b6bdbcbbb2fbb6bafba0be">[email&#160;protected]</span></a>
-              <a href="#quiz">Free clarity quiz</a>
+              <a href="https://www.patreon.com/cw/fullbloom" target="_blank" rel="noopener">Patreon community</a>
             </div>
             <div class="footer-column">
               <p class="footer-h">Follow</p>

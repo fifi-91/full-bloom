@@ -479,7 +479,15 @@ function App() {
 /* =========================================
    MOUNT
    ========================================= */
-ReactDOM.createRoot(document.getElementById("pillars-mount")).render(<PillarSelector />);
-ReactDOM.createRoot(document.getElementById("quiz-mount")).render(<QuizCard />);
-ReactDOM.createRoot(document.getElementById("faq-mount")).render(<FAQ />);
-ReactDOM.createRoot(document.getElementById("tweaks-mount")).render(<App />);
+function mountReactComponent(id, component) {
+  const mountNode = document.getElementById(id);
+
+  if (!mountNode) return;
+
+  ReactDOM.createRoot(mountNode).render(component);
+}
+
+mountReactComponent("pillars-mount", <PillarSelector />);
+mountReactComponent("quiz-mount", <QuizCard />);
+mountReactComponent("faq-mount", <FAQ />);
+mountReactComponent("tweaks-mount", <App />);
