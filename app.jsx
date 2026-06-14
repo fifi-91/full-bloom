@@ -178,28 +178,28 @@ function QuizCard() {
    ========================================= */
 const FAQS = [
   {
-    q: "How is this different from therapy or another life-coach course?",
-    a: "Therapy explores why. Most coaching courses sell motivation. The Full Bloom Method is a structured 12-week 1:1 programme — equal parts deep reflection and practical action — designed so the change actually sticks once we\u2019re finished.",
+    q: "How is Full Bloom different from other coaching programmes?",
+    a: "Full Bloom is not a course, a workbook, or a group programme. It is a structured, deeply personal 12-week journey, just the two of us. We work from the inside out, reflection and action together, until the change is genuinely yours to keep.",
   },
   {
-    q: "I\u2019m not sure I\u2019m \u2018ready.\u2019 Should I still book a call?",
-    a: "Almost everyone says this. The discovery call is exactly where we figure that out together — there\u2019s zero pressure to commit. If it\u2019s not the right time, I\u2019ll tell you, and we\u2019ll part on great terms.",
+    q: "What does a typical week actually look like?",
+    a: "One 60-minute 1:1 session on Zoom, a personal reflection prompt to sit with in between, and voice-note support whenever something comes up. Every phase builds on the last: weeks 1 to 3 open things up, weeks 4 to 8 deepen the work, and weeks 9 to 12 make it permanent. You finish with a 6-month forward plan and a 30-day check-in with me.",
   },
   {
-    q: "What does the 12 weeks actually look like, week to week?",
-    a: "One 60-minute 1:1 session per week (Zoom), a personalised reflection prompt between sessions, and voice-note support whenever something comes up. Weeks 1–3 focus on foundation, 4–8 on action, 9–12 on integration. You leave with a 6-month plan and a 30-day check-in.",
+    q: "I have a full life already. Is this realistic for me?",
+    a: "Absolutely. Before the programme begins, we have a dedicated time planning call together. We look at your real week and find where everything fits, so nothing is left to chance. The work between sessions is intentional, not heavy, and it all belongs somewhere in your life from day one.",
   },
   {
-    q: "Is the £1,500 investment worth it?",
-    a: "I\u2019m biased — but the average UK premium 1:1 coaching package runs £3,000–£5,000. More importantly: clients commonly recoup the investment within months through pay rises, pivots, or simply stopping things that were costing them more than money. And there\u2019s a 2-session refund window if it\u2019s not right.",
+    q: "Is the \u00a31,500 investment worth it?",
+    a: "That works out at \u00a3125 a week for a programme that changes how you think, how you move through the world, and what you believe is possible for you. The tools, the clarity, and the confidence you leave with are yours for life. That is not something you can put a price on.",
   },
   {
-    q: "Can I do this if I\u2019m juggling a full-time job and family?",
-    a: "Yes — most clients do. Sessions are flexible (evening and weekend slots available) and the work between sessions is intentionally light. The programme is designed for women with full lives, not blank calendars.",
+    q: "What if \u00a31,500 is not possible for me right now?",
+    a: "You can spread the investment across three payments, starting with \u00a3550. If the timing is not quite right for 1:1 work, the Full Bloom community is a beautiful place to begin.",
   },
   {
-    q: "What if I can\u2019t afford £1,500 right now?",
-    a: "Choose the 3-payment plan (£550 to begin, then split across the programme), or join the Full Bloom community on Patreon (£8/mo) for tools and live workshops while you decide if 1:1 is right.",
+    q: "How do I know if I am ready to book a call?",
+    a: "If something in you is asking that question, you are ready enough. The discovery call is a conversation, not a commitment. We talk, we see if there is a fit, and we go from there. There is no pressure, only honesty.",
   },
 ];
 
