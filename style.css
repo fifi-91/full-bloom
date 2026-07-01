@@ -215,6 +215,11 @@ em { font-style: italic; }
 }
 .nav-menu a:hover { color: var(--rust); }
 
+.nav-menu a.active {
+  color: var(--rust);
+  font-weight: 600;
+}
+
 .mobile-menu-toggle {
   display: none;
 }
