@@ -323,7 +323,7 @@ em { font-style: italic; }
   inset: 0;
   z-index: 1;
 
-  background: rgba(26, 14, 8, 0.438);
+  background: rgba(26, 14, 8, 0.18);
 }
 
 .hero-inner {
@@ -371,21 +371,21 @@ em { font-style: italic; }
   font-size: clamp(52px, 5.4vw, 60px);
   line-height: 1.02;
   letter-spacing: -0.04em;
-  color: var(--cream);
+  color: #3E3A28;
   max-width: 620px;
 }
 .hero-headline em {
   font-weight: 400;
   font-style: italic;
-  color: var(--cream);
+  color: #3E3A28;
 }
 
 .hero-sub {
   max-width: 640px;
   font-size: clamp(17px, 1.4vw, 20px);
   line-height: 1.55;
-  color: var(--cream-soft);
-  font-weight: 300;
+  color: #3E3A28;
+  font-weight: 400;
 }
 
 .hero-actions {
@@ -517,7 +517,7 @@ em { font-style: italic; }
 /* ===== PROBLEM ===== */
 .problem {
   padding: 120px 0 100px;
-  background: var(--bg);
+  background: #ffffff;
 }
 .problem-h {
   margin-top: 14px;
@@ -952,7 +952,7 @@ em { font-style: italic; }
 }
 .phase-deliv li:last-child { border-bottom: 1px solid var(--line-light); }
 .phase-deliv li::before {
-  content: "â—‡";
+  content: "•";
   color: var(--rust);
 }
 

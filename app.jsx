@@ -223,58 +223,6 @@ function FAQ() {
 }
 
 /* =========================================
-   URGENCY BANNER
-   ========================================= */
-function useCountdown(target) {
-  const [now, setNow] = useState(Date.now());
-  useEffect(() => {
-    const id = setInterval(() => setNow(Date.now()), 1000);
-    return () => clearInterval(id);
-  }, []);
-  const diff = Math.max(0, target - now);
-  const d = Math.floor(diff / 86400000);
-  const h = Math.floor((diff / 3600000) % 24);
-  const m = Math.floor((diff / 60000) % 60);
-  const s = Math.floor((diff / 1000) % 60);
-  return { d, h, m, s };
-}
-
-// Cohort opens Mon 9 June 2026; bookings close Fri 6 June 2026 23:59
-const COHORT_CLOSE = (() => {
-  const t = new Date(2026, 5, 6, 23, 59, 59, 0); // June = month index 5
-  // Fallback if today is past close: roll to +21 days so banner stays useful
-  if (t.getTime() < Date.now()) {
-    const f = new Date();
-    f.setDate(f.getDate() + 21);
-    f.setHours(23, 59, 59, 0);
-    return f.getTime();
-  }
-  return t.getTime();
-})();
-
-function UrgencyBanner({ enabled, onClose, mode }) {
-  const { d, h, m, s } = useCountdown(COHORT_CLOSE);
-  if (!enabled) return null;
-  const cd = (
-    <span className="cd">
-      <b>{String(d).padStart(2, "0")}</b>d <b>{String(h).padStart(2, "0")}</b>h <b>{String(m).padStart(2, "0")}</b>m <b>{String(s).padStart(2, "0")}</b>s
-    </span>
-  );
-  const messages = {
-    soft: <>Next cohort: <strong>Mon 9 June 2026</strong> · <strong>4 spots left</strong> · Closes in {cd} · <a href="#booking">Reserve your call →</a></>,
-    scarcity: <><strong>Only 3 of 6 spots left</strong> · cohort closes <strong>Fri 6 June</strong> · {cd} · <a href="#booking">Book a call →</a></>,
-    none: null,
-  };
-  return (
-    <div className="urgency-banner">
-      {mode === "scarcity" && <span className="pulse"></span>}
-      <span>{messages[mode] || messages.soft}</span>
-      <button className="x" onClick={onClose} aria-label="Dismiss">×</button>
-    </div>
-  );
-}
-
-/* =========================================
    HERO COPY VARIANTS
    ========================================= */
 const HERO_VARIANTS = {
