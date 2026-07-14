@@ -831,7 +831,7 @@ em { font-style: italic; }
 /* ===== METHOD ===== */
 .method {
   padding: 140px 0 120px;
-  background: var(--bg);
+  background: #ffffff;
 }
 .method-head {
   max-width: 760px;
@@ -1070,7 +1070,7 @@ em { font-style: italic; }
 /* ===== COACH ===== */
 .coach {
   padding: 140px 0;
-  background: var(--bg-soft);
+  background: #ffffff;
 }
 .coach-inner {
   display: grid;
@@ -1484,7 +1484,7 @@ em { font-style: italic; }
 /* ===== PRICING ===== */
 .pricing {
   padding: 120px 0;
-  background: var(--bg);
+  background: #ffffff;
   text-align: center;
 }
 .pricing h2 {
