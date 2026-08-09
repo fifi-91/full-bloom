@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9FRTT8109"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G9FRTT8109');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work With Me | Full Bloom Coaching</title>
+  <meta name="description" content="Partner with Vivienne Katahena and Full Bloom Coaching on workshops, talks, career development, community programmes and tailored organisational support." />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* =========================================
+       WORK WITH ME
+       ========================================= */
+    .wwm-page {
+      background: var(--bg);
+      color: var(--ink);
+    }
+
+    .wwm-page .nav-shell {
+      background: rgba(251, 244, 230, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .wwm-main {
+      overflow: hidden;
+    }
+
+    /* HERO */
+    .wwm-hero {
+      min-height: 92vh;
+      display: flex;
+      align-items: flex-end;
+      background: var(--bg);
+      border-bottom: 1px solid var(--line-light);
+    }
+
+    .wwm-hero-inner {
+      width: min(1240px, calc(100% - 96px));
+      margin: 0 auto;
+      padding: 190px 0 104px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.55fr);
+      gap: 88px;
+      align-items: end;
+    }
+
+    .wwm-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--rust);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .wwm-eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: var(--rust);
+    }
+
+    .wwm-hero h1 {
+      max-width: 860px;
+      margin-top: 30px;
+      font-family: "Reckless Neue", serif;
+      font-weight: 300;
+      font-size: clamp(60px, 7.2vw, 108px);
+      line-height: 0.92;
+      letter-spacing: -0.065em;
+      color: var(--olive);
+    }
+
+    .wwm-hero h1 em {
+      color: var(--rust);
+      font-weight: 400;
+    }
+
+    .wwm-hero-side {
+      padding-bottom: 8px;
+    }
+
+    .wwm-hero-side p {
+      font-size: 18px;
+      line-height: 1.65;
+      color: var(--ink-soft);
+    }
+
+    .wwm-hero-side .btn {
+      margin-top: 30px;
+    }
+
+    /* INTRO */
+    .wwm-intro {
+      padding: 116px 0;
+      background: #fff;
+    }
+
+    .wwm-intro-inner {
+      width: min(1040px, calc(100% - 96px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 76px;
+      align-items: start;
+    }
+
+    .wwm-intro h2,
+    .wwm-section-title {
+      font-family: "Reckless Neue", serif;
+      font-weight: 300;
+      letter-spacing: -0.045em;
+      color: var(--ink);
+    }
+
+    .wwm-intro h2 {
+      font-size: clamp(38px, 4vw, 58px);
+      line-height: 1.05;
+    }
+
+    .wwm-intro-copy p {
+      font-size: 19px;
+      line-height: 1.72;
+      color: var(--ink-soft);
+      margin-bottom: 20px;
+    }
+
+    .wwm-intro-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* SERVICES */
+    .wwm-services {
+      padding: 116px 0 132px;
+      background: var(--wine);
+      color: var(--cream);
+    }
+
+    .wwm-services-inner {
+      width: min(1240px, calc(100% - 96px));
+      margin: 0 auto;
+    }
+
+    .wwm-services-head {
+      max-width: 780px;
+      margin-bottom: 62px;
+    }
+
+    .wwm-services .kicker {
+      color: var(--gold);
+    }
+
+    .wwm-services .wwm-section-title {
+      margin-top: 18px;
+      font-size: clamp(42px, 5vw, 68px);
+      line-height: 1.02;
+      color: var(--cream);
+    }
+
+    .wwm-services .wwm-section-title em {
+      color: #ea9e7c;
+    }
+
+    .wwm-service-list {
+      border-top: 1px solid rgba(240, 227, 209, 0.18);
+    }
+
+    .wwm-service-row {
+      display: grid;
+      grid-template-columns: 88px minmax(240px, 0.8fr) minmax(0, 1.3fr);
+      gap: 30px;
+      padding: 34px 0;
+      border-bottom: 1px solid rgba(240, 227, 209, 0.18);
+      align-items: start;
+    }
+
+    .wwm-service-num {
+      font-family: "Reckless Neue", serif;
+      font-size: 26px;
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .wwm-service-row h3 {
+      font-family: "Reckless Neue", serif;
+      font-weight: 400;
+      font-size: 29px;
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      color: var(--cream);
+    }
+
+    .wwm-service-row p {
+      max-width: 650px;
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--cream-soft);
+    }
+
+    /* FIT */
+    .wwm-fit {
+      padding: 120px 0;
+      background: var(--bg-soft);
+    }
+
+    .wwm-fit-inner {
+      width: min(1240px, calc(100% - 96px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 90px;
+    }
+
+    .wwm-fit .wwm-section-title {
+      margin-top: 18px;
+      font-size: clamp(42px, 4.6vw, 62px);
+      line-height: 1.04;
+    }
+
+    .wwm-fit .wwm-section-title em {
+      color: var(--rust);
+    }
+
+    .wwm-fit-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .wwm-fit-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+      align-items: center;
+    }
+
+    .wwm-fit-item strong {
+      font-family: "Reckless Neue", serif;
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+    }
+
+    .wwm-fit-item span {
+      font-size: 13px;
+      line-height: 1.4;
+      text-align: right;
+      color: var(--muted);
+    }
+
+    /* PROCESS */
+    .wwm-process {
+      padding: 116px 0;
+      background: #fff;
+    }
+
+    .wwm-process-inner {
+      width: min(1100px, calc(100% - 96px));
+      margin: 0 auto;
+    }
+
+    .wwm-process-head {
+      max-width: 700px;
+      margin-bottom: 54px;
+    }
+
+    .wwm-process .wwm-section-title {
+      margin-top: 18px;
+      font-size: clamp(42px, 4.8vw, 64px);
+      line-height: 1.03;
+    }
+
+    .wwm-process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .wwm-process-card {
+      min-height: 270px;
+      padding: 30px;
+      background: var(--bg-soft);
+      border: 1px solid var(--line-light);
+      border-radius: 10px;
+    }
+
+    .wwm-process-card span {
+      font-family: "Reckless Neue", serif;
+      font-size: 28px;
+      font-style: italic;
+      color: var(--rust);
+    }
+
+    .wwm-process-card h3 {
+      margin-top: 46px;
+      font-family: "Reckless Neue", serif;
+      font-size: 27px;
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      color: var(--olive);
+    }
+
+    .wwm-process-card p {
+      margin-top: 12px;
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--ink-soft);
+    }
+
+    /* CONTACT */
+    .wwm-contact {
+      background: var(--olive);
+      color: var(--cream);
+    }
+
+    .wwm-contact-inner {
+      width: min(1240px, calc(100% - 96px));
+      margin: 0 auto;
+      padding: 118px 0;
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 100px;
+      align-items: start;
+    }
+
+    .wwm-contact-copy {
+      position: sticky;
+      top: 130px;
+    }
+
+    .wwm-contact .kicker {
+      color: var(--gold);
+    }
+
+    .wwm-contact h2 {
+      margin-top: 20px;
+      max-width: 500px;
+      font-family: "Reckless Neue", serif;
+      font-size: clamp(48px, 5vw, 70px);
+      font-weight: 300;
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+      color: var(--cream);
+    }
+
+    .wwm-contact h2 em {
+      color: var(--gold);
+    }
+
+    .wwm-contact-copy > p:not(.kicker) {
+      max-width: 460px;
+      margin-top: 24px;
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--cream-soft);
+    }
+
+    .wwm-direct-email {
+      display: inline-block;
+      margin-top: 28px;
+      font-size: 15px;
+      color: var(--gold);
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+
+    .wwm-form {
+      background: var(--bg);
+      color: var(--ink);
+      padding: 42px;
+      border-radius: 12px;
+    }
+
+    .wwm-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px 18px;
+    }
+
+    .wwm-field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .wwm-field-full {
+      grid-column: 1 / -1;
+    }
+
+    .wwm-field label,
+    .wwm-form legend {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .wwm-field input,
+    .wwm-field select,
+    .wwm-field textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background: #fff;
+      color: var(--ink);
+      font-family: "Fakt Pro", sans-serif;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .wwm-field input,
+    .wwm-field select {
+      height: 54px;
+      padding: 0 16px;
+    }
+
+    .wwm-field textarea {
+      min-height: 150px;
+      resize: vertical;
+      padding: 15px 16px;
+      line-height: 1.55;
+    }
+
+    .wwm-field input:focus,
+    .wwm-field select:focus,
+    .wwm-field textarea:focus {
+      border-color: var(--rust);
+      box-shadow: 0 0 0 3px rgba(171, 97, 59, 0.08);
+    }
+
+    .wwm-checkboxes {
+      grid-column: 1 / -1;
+      margin-top: 2px;
+      padding: 0;
+      border: 0;
+    }
+
+    .wwm-checkboxes legend {
+      margin-bottom: 12px;
+    }
+
+    .wwm-chip-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .wwm-chip-grid label {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .wwm-chip-grid input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .wwm-chip-grid span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 100px;
+      background: #fff;
+      color: var(--ink-soft);
+      font-size: 14px;
+      transition: all 0.18s ease;
+    }
+
+    .wwm-chip-grid input:checked + span {
+      background: var(--wine);
+      border-color: var(--wine);
+      color: var(--cream);
+    }
+
+    .wwm-form-actions {
+      grid-column: 1 / -1;
+      margin-top: 8px;
+    }
+
+    .wwm-form-actions .btn {
+      width: 100%;
+      border: 0;
+    }
+
+    .wwm-form-note {
+      margin-top: 14px;
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .wwm-honey {
+      position: absolute !important;
+      left: -9999px !important;
+      width: 1px !important;
+      height: 1px !important;
+      overflow: hidden !important;
+    }
+
+    @media (max-width: 960px) {
+      .wwm-hero-inner,
+      .wwm-intro-inner,
+      .wwm-fit-inner,
+      .wwm-contact-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .wwm-hero-inner {
+        gap: 44px;
+      }
+
+      .wwm-intro-inner,
+      .wwm-fit-inner,
+      .wwm-contact-inner {
+        gap: 50px;
+      }
+
+      .wwm-service-row {
+        grid-template-columns: 60px 1fr;
+      }
+
+      .wwm-service-row p {
+        grid-column: 2;
+      }
+
+      .wwm-process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .wwm-process-card {
+        min-height: auto;
+      }
+
+      .wwm-process-card h3 {
+        margin-top: 30px;
+      }
+
+      .wwm-contact-copy {
+        position: static;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .wwm-page .mobile-menu-toggle span,
+      body.wwm-page.menu-open .mobile-menu-toggle span {
+        background: var(--ink);
+      }
+
+      .wwm-hero {
+        min-height: auto;
+      }
+
+      .wwm-hero-inner,
+      .wwm-services-inner,
+      .wwm-fit-inner,
+      .wwm-process-inner,
+      .wwm-contact-inner {
+        width: calc(100% - 48px);
+      }
+
+      .wwm-hero-inner {
+        padding: 140px 0 72px;
+      }
+
+      .wwm-hero h1 {
+        font-size: 58px;
+      }
+
+      .wwm-hero-side p,
+      .wwm-intro-copy p {
+        font-size: 17px;
+      }
+
+      .wwm-intro,
+      .wwm-services,
+      .wwm-fit,
+      .wwm-process {
+        padding: 80px 0;
+      }
+
+      .wwm-intro-inner {
+        width: calc(100% - 48px);
+      }
+
+      .wwm-service-row {
+        grid-template-columns: 42px 1fr;
+        gap: 16px;
+        padding: 28px 0;
+      }
+
+      .wwm-service-row h3 {
+        font-size: 25px;
+      }
+
+      .wwm-fit-item {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .wwm-fit-item span {
+        text-align: left;
+      }
+
+      .wwm-contact-inner {
+        padding: 80px 0;
+      }
+
+      .wwm-form {
+        padding: 26px 20px;
+      }
+
+      .wwm-form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .wwm-field-full,
+      .wwm-checkboxes,
+      .wwm-form-actions {
+        grid-column: auto;
+      }
+    }
+  </style>
+</head>
+
+<body class="wwm-page">
+  <div class="site-wrapper">
+    <header class="site-header" data-screen-label="Header">
+      <div class="nav-shell">
+        <a href="index.html#top" class="nav-logo">
+          <img src="assets/images/FBC-Logo-nav-color.png" alt="Full Bloom Coaching" />
+        </a>
+
+        <nav class="nav-menu">
+          <a href="index.html#method">The Method</a>
+          <a href="about.html">About Your Coach</a>
+          <a href="index.html#stories">Stories</a>
+          <a href="work-with-me.html" class="active">Work With Me</a>
+          <a href="digital-tracker-login.html">Digital Tracker</a>
+          <a href="#enquire" class="nav-cta">Start a conversation →</a>
+        </nav>
+
+        <button class="mobile-menu-toggle" type="button" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="mobile-menu-panel">
+          <nav class="mobile-menu-links">
+            <a href="index.html#method">The Method</a>
+            <a href="about.html">About Your Coach</a>
+            <a href="index.html#stories">Stories</a>
+            <a href="work-with-me.html" aria-current="page">Work With Me</a>
+            <a href="digital-tracker-login.html">Digital Tracker</a>
+          </nav>
+          <a href="#enquire" class="mobile-menu-cta">Start a conversation →</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="wwm-main">
+      <section class="wwm-hero">
+        <div class="wwm-hero-inner">
+          <div>
+            <span class="wwm-eyebrow">Work with Full Bloom</span>
+            <h1>Let’s create something that helps people <em>move forward.</em></h1>
+          </div>
+
+          <div class="wwm-hero-side">
+            <p>
+              Alongside 1:1 coaching, I work with organisations, communities and teams to create thoughtful experiences around careers, confidence, change and personal development.
+            </p>
+            <a href="#enquire" class="btn btn-primary">Discuss a partnership →</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="wwm-intro">
+        <div class="wwm-intro-inner">
+          <div>
+            <p class="kicker">Beyond 1:1 coaching</p>
+            <h2>Support designed around the people in the room.</h2>
+          </div>
+
+          <div class="wwm-intro-copy">
+            <p>
+              My work has always centred on people at moments of change. Over more than 25 years, I’ve supported people across careers guidance, education, employability and personal development — from schools and higher education to community programmes and rehabilitation services.
+            </p>
+            <p>
+              Full Bloom brings that experience into flexible partnerships for organisations that want to give their people practical, human support. We can begin with an existing format or shape something around your audience, objectives and context.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="wwm-services">
+        <div class="wwm-services-inner">
+          <div class="wwm-services-head">
+            <p class="kicker">Ways to work together</p>
+            <h2 class="wwm-section-title">A flexible offer, built around <em>what your people need.</em></h2>
+          </div>
+
+          <div class="wwm-service-list">
+            <article class="wwm-service-row">
+              <span class="wwm-service-num">01</span>
+              <h3>Workshops &amp; facilitated sessions</h3>
+              <p>Interactive sessions around confidence, career direction, transferable skills, personal development, reflection and navigating change — designed for groups rather than delivered as a one-size-fits-all presentation.</p>
+            </article>
+
+            <article class="wwm-service-row">
+              <span class="wwm-service-num">02</span>
+              <h3>Talks, panels &amp; guest sessions</h3>
+              <p>Thoughtful contributions for community events, professional networks, education settings and internal programmes where lived experience, practical guidance and an engaging coaching perspective can add value.</p>
+            </article>
+
+            <article class="wwm-service-row">
+              <span class="wwm-service-num">03</span>
+              <h3>Career development support</h3>
+              <p>Structured support for people navigating career choices, transitions, redundancy, return-to-work moments or a broader rethink of what comes next — informed by decades of careers guidance experience.</p>
+            </article>
+
+            <article class="wwm-service-row">
+              <span class="wwm-service-num">04</span>
+              <h3>Community &amp; women’s programmes</h3>
+              <p>Partnered sessions and development experiences for community groups and women’s networks, with space for reflection, confidence-building, connection and practical next steps.</p>
+            </article>
+
+            <article class="wwm-service-row">
+              <span class="wwm-service-num">05</span>
+              <h3>Bespoke organisational partnerships</h3>
+              <p>If the need doesn’t fit neatly into one format, we can design the right one together — from a single session to a short series, a development programme or a tailored coaching collaboration.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="wwm-fit">
+        <div class="wwm-fit-inner">
+          <div>
+            <p class="kicker">Who I work with</p>
+            <h2 class="wwm-section-title">Partnerships with a clear <em>human purpose.</em></h2>
+          </div>
+
+          <div class="wwm-fit-list">
+            <div class="wwm-fit-item">
+              <strong>Women’s networks &amp; communities</strong>
+              <span>Growth · confidence · transitions</span>
+            </div>
+            <div class="wwm-fit-item">
+              <strong>Employers &amp; people teams</strong>
+              <span>Career development · change · wellbeing</span>
+            </div>
+            <div class="wwm-fit-item">
+              <strong>Schools, colleges &amp; universities</strong>
+              <span>Careers · direction · transferable skills</span>
+            </div>
+            <div class="wwm-fit-item">
+              <strong>Charities &amp; community organisations</strong>
+              <span>Support · progression · confidence</span>
+            </div>
+            <div class="wwm-fit-item">
+              <strong>Professional networks &amp; events</strong>
+              <span>Talks · panels · facilitated sessions</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="wwm-process">
+        <div class="wwm-process-inner">
+          <div class="wwm-process-head">
+            <p class="kicker">How it works</p>
+            <h2 class="wwm-section-title">Start with the need. Then shape the right response.</h2>
+          </div>
+
+          <div class="wwm-process-grid">
+            <article class="wwm-process-card">
+              <span>01</span>
+              <h3>Tell me what you’re trying to achieve.</h3>
+              <p>Share the audience, context, challenge and outcome you have in mind. It doesn’t need to be fully formed.</p>
+            </article>
+
+            <article class="wwm-process-card">
+              <span>02</span>
+              <h3>We shape the right format.</h3>
+              <p>I’ll suggest an approach that fits the people involved — whether that is a workshop, talk, series or something more tailored.</p>
+            </article>
+
+            <article class="wwm-process-card">
+              <span>03</span>
+              <h3>We create something useful.</h3>
+              <p>The goal is always the same: an experience that feels relevant in the room and leaves people with something they can actually use afterwards.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="wwm-contact" id="enquire">
+        <div class="wwm-contact-inner">
+          <div class="wwm-contact-copy">
+            <p class="kicker">Start a conversation</p>
+            <h2>Tell me what you have <em>in mind.</em></h2>
+            <p>
+              If you’re exploring a workshop, event, programme or partnership, send a few details below. I’ll come back to you personally to discuss what could work.
+            </p>
+            <a class="wwm-direct-email" href="mailto:info@fullbloomcoaching.co.uk">info@fullbloomcoaching.co.uk</a>
+          </div>
+
+          <form
+            class="wwm-form"
+            action="https://formsubmit.co/info@fullbloomcoaching.co.uk"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="New Full Bloom partnership enquiry" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="true" />
+
+            <div class="wwm-honey" aria-hidden="true">
+              <label for="company-website">Leave this field empty</label>
+              <input id="company-website" type="text" name="_honey" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div class="wwm-form-grid">
+              <div class="wwm-field">
+                <label for="name">Your name</label>
+                <input id="name" name="Name" type="text" autocomplete="name" required />
+              </div>
+
+              <div class="wwm-field">
+                <label for="email">Email address</label>
+                <input id="email" name="Email" type="email" autocomplete="email" required />
+              </div>
+
+              <div class="wwm-field">
+                <label for="organisation">Organisation</label>
+                <input id="organisation" name="Organisation" type="text" autocomplete="organization" />
+              </div>
+
+              <div class="wwm-field">
+                <label for="role">Your role</label>
+                <input id="role" name="Role" type="text" autocomplete="organization-title" />
+              </div>
+
+              <fieldset class="wwm-checkboxes">
+                <legend>What are you interested in?</legend>
+                <div class="wwm-chip-grid">
+                  <label><input type="checkbox" name="Interest[]" value="Workshop"><span>Workshop</span></label>
+                  <label><input type="checkbox" name="Interest[]" value="Talk or panel"><span>Talk or panel</span></label>
+                  <label><input type="checkbox" name="Interest[]" value="Career development"><span>Career development</span></label>
+                  <label><input type="checkbox" name="Interest[]" value="Community programme"><span>Community programme</span></label>
+                  <label><input type="checkbox" name="Interest[]" value="Bespoke partnership"><span>Bespoke partnership</span></label>
+                </div>
+              </fieldset>
+
+              <div class="wwm-field">
+                <label for="audience">Who is it for?</label>
+                <input id="audience" name="Audience" type="text" placeholder="e.g. 30 women returning to work" />
+              </div>
+
+              <div class="wwm-field">
+                <label for="timing">Timing</label>
+                <input id="timing" name="Timing" type="text" placeholder="e.g. October 2026 / still exploring" />
+              </div>
+
+              <div class="wwm-field wwm-field-full">
+                <label for="message">What would you like to create?</label>
+                <textarea id="message" name="Message" placeholder="Tell me a little about the context, what you want people to get from it, and anything else that would be helpful to know." required></textarea>
+              </div>
+
+              <div class="wwm-form-actions">
+                <button class="btn btn-primary" type="submit">Send partnership enquiry →</button>
+                <p class="wwm-form-note">Your enquiry will be sent directly to Full Bloom Coaching. No mailing-list sign-up.</p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/images/logo-dark.png" alt="Full Bloom Coaching" />
+          <p class="footer-tag">1:1 coaching and partnerships for people ready to move forward with confidence.</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <p class="footer-h">Programme</p>
+            <a href="index.html#method">The Method</a>
+            <a href="index.html#pricing">Investment</a>
+            <a href="index.html#faq">FAQ</a>
+          </div>
+
+          <div class="footer-column">
+            <p class="footer-h">About</p>
+            <a href="about.html">Your coach, Vivienne</a>
+            <a href="index.html#stories">Client stories</a>
+            <a href="work-with-me.html">Work With Me</a>
+          </div>
+
+          <div class="footer-column">
+            <p class="footer-h">Get in touch</p>
+            <a href="index.html#booking">Book a coaching call</a>
+            <a href="#enquire">Partnership enquiry</a>
+            <a href="mailto:info@fullbloomcoaching.co.uk">Email Full Bloom Coaching</a>
+          </div>
+
+          <div class="footer-column">
+            <p class="footer-h">Follow</p>
+            <a href="#">Instagram</a>
+            <a href="https://www.patreon.com/fullbloomcoaching" target="_blank" rel="noopener">Patreon</a>
+            <a href="https://www.linkedin.com/in/vivkatahena/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Full Bloom Coaching · Vivienne Katahena</p>
+        <p>Website designed by <a href="https://www.sophiaakrofi.com" target="_blank" rel="noopener">Sophia Akrofi</a></p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const menuToggle = document.querySelector(".mobile-menu-toggle");
+    const menuLinks = document.querySelectorAll(".mobile-menu-panel a");
+
+    if (menuToggle) {
+      menuToggle.addEventListener("click", () => {
+        document.body.classList.toggle("menu-open");
+      });
+    }
+
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        document.body.classList.remove("menu-open");
+      });
+    });
+  </script>
+</body>
+</html>
