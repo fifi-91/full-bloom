@@ -37,7 +37,7 @@
 
     /* HERO */
     .wwm-hero {
-      min-height: 92vh;
+      min-height: 680px;
       display: flex;
       align-items: flex-end;
       background: var(--bg);
@@ -47,7 +47,7 @@
     .wwm-hero-inner {
       width: min(1240px, calc(100% - 96px));
       margin: 0 auto;
-      padding: 190px 0 104px;
+      padding: 150px 0 82px;
       display: grid;
       grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.55fr);
       gap: 88px;
@@ -77,8 +77,8 @@
       margin-top: 30px;
       font-family: "Reckless Neue", serif;
       font-weight: 300;
-      font-size: clamp(60px, 7.2vw, 108px);
-      line-height: 0.92;
+      font-size: clamp(60px, 5.8vw, 86px);
+      line-height: 0.94;
       letter-spacing: -0.065em;
       color: var(--olive);
     }
@@ -516,6 +516,21 @@
       overflow: hidden !important;
     }
 
+    /* Keep the hero restrained on large monitors */
+    @media (min-width: 1440px) {
+      .wwm-hero {
+        min-height: 680px;
+      }
+
+      .wwm-hero-inner {
+        padding: 150px 0 82px;
+      }
+
+      .wwm-hero h1 {
+        font-size: 86px;
+      }
+    }
+
     @media (max-width: 960px) {
       .wwm-hero-inner,
       .wwm-intro-inner,
@@ -703,7 +718,7 @@
 
           <div class="wwm-intro-copy">
             <p>
-              My work has always centred on people at moments of change. Over more than 25 years, I’ve supported people across careers guidance, education, employability and personal development — from schools and higher education to community programmes and rehabilitation services.
+              My work has always centred on people at moments of change. Over more than 25 years, I’ve supported people across careers guidance, education, employability and personal development. from schools and higher education to community programmes and rehabilitation services.
             </p>
             <p>
               Full Bloom brings that experience into flexible partnerships for organisations that want to give their people practical, human support. We can begin with an existing format or shape something around your audience, objectives and context.
@@ -723,7 +738,7 @@
             <article class="wwm-service-row">
               <span class="wwm-service-num">01</span>
               <h3>Workshops &amp; facilitated sessions</h3>
-              <p>Interactive sessions around confidence, career direction, transferable skills, personal development, reflection and navigating change — designed for groups rather than delivered as a one-size-fits-all presentation.</p>
+              <p>Interactive sessions around confidence, career direction, transferable skills, personal development, reflection and navigating change. designed for groups rather than delivered as a one-size-fits-all presentation.</p>
             </article>
 
             <article class="wwm-service-row">
@@ -735,7 +750,7 @@
             <article class="wwm-service-row">
               <span class="wwm-service-num">03</span>
               <h3>Career development support</h3>
-              <p>Structured support for people navigating career choices, transitions, redundancy, return-to-work moments or a broader rethink of what comes next — informed by decades of careers guidance experience.</p>
+              <p>Structured support for people navigating career choices, transitions, redundancy, return-to-work moments or a broader rethink of what comes next. informed by decades of careers guidance experience.</p>
             </article>
 
             <article class="wwm-service-row">
@@ -747,7 +762,7 @@
             <article class="wwm-service-row">
               <span class="wwm-service-num">05</span>
               <h3>Bespoke organisational partnerships</h3>
-              <p>If the need doesn’t fit neatly into one format, we can design the right one together — from a single session to a short series, a development programme or a tailored coaching collaboration.</p>
+              <p>If the need doesn’t fit neatly into one format, we can design the right one together. from a single session to a short series, a development programme or a tailored coaching collaboration.</p>
             </article>
           </div>
         </div>
@@ -802,7 +817,7 @@
             <article class="wwm-process-card">
               <span>02</span>
               <h3>We shape the right format.</h3>
-              <p>I’ll suggest an approach that fits the people involved — whether that is a workshop, talk, series or something more tailored.</p>
+              <p>I’ll suggest an approach that fits the people involved. whether that is a workshop, talk, series or something more tailored.</p>
             </article>
 
             <article class="wwm-process-card">
@@ -870,11 +885,6 @@
                   <label><input type="checkbox" name="Interest[]" value="Bespoke partnership"><span>Bespoke partnership</span></label>
                 </div>
               </fieldset>
-
-              <div class="wwm-field">
-                <label for="audience">Who is it for?</label>
-                <input id="audience" name="Audience" type="text" placeholder="e.g. 30 women returning to work" />
-              </div>
 
               <div class="wwm-field">
                 <label for="timing">Timing</label>
