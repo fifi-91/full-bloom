@@ -388,6 +388,10 @@ em { font-style: italic; }
   font-weight: 400;
 }
 
+.hero-sub-mobile {
+  display: none;
+}
+
 .hero-actions {
   display: flex;
   gap: 14px;
@@ -3939,13 +3943,12 @@ body.menu-open .mobile-menu-panel {
 .hero-overlay {
   height: 100svh;
   bottom: auto;
-
   background: linear-gradient(
     to bottom,
-    rgba(26, 14, 8, 0.02) 0%,
-    rgba(26, 14, 8, 0.02) 42%,
-    rgba(26, 14, 8, 0.34) 68%,
-    rgba(26, 14, 8, 0.56) 100%
+    rgba(26, 14, 8, 0.00) 0%,
+    rgba(26, 14, 8, 0.00) 58%,
+    rgba(26, 14, 8, 0.10) 78%,
+    rgba(26, 14, 8, 0.24) 100%
   );
 }
 
@@ -3964,34 +3967,38 @@ body.menu-open .mobile-menu-panel {
 }
 
 .hero-headline {
-  margin-top: 22px;
+  margin-top: 65%;
   max-width: 72%;
   font-size: 36px;
   line-height: 1.08;
   letter-spacing: -0.05em;
 }
 
-.hero-sub {
-  width: min(100%, 390px);
-  margin: auto auto 0;
-  padding: 16px 18px;
-  border-radius: 14px;
-  background: rgba(29, 23, 20, 0.46);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  font-size: 17px;
-  line-height: 1.45;
-  letter-spacing: -0.02em;
-  text-align: left;
-  color: #ffffff;
+.hero-sub-desktop {
+  display: none;
+}
+
+.hero-sub-mobile {
+  display: block;
+  margin: 14px 0 0;
+  padding: 0;
+  background: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  font-family: "Fakt Pro", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #3E3A28;
 }
 
 .hero-actions {
   width: 100%;
-  margin-top: 14px;
+  margin-top: auto;
   flex-direction: column;
   align-items: stretch;
   gap: 10px;
+  padding-bottom: 0;
 }
 
 .hero-actions .btn {
@@ -4018,7 +4025,8 @@ body.menu-open .mobile-menu-panel {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  top: 100svh;
+  bottom: auto;
   transform: none;
   width: 100%;
   min-height: 104px;
