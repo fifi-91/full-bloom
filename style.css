@@ -4019,6 +4019,7 @@ body.menu-open .mobile-menu-panel {
   background: rgba(251, 244, 230, 0.90);
   border-color: rgba(29, 23, 20, 0.72);
   color: var(--ink);
+  margin-bottom: 12px;
 }
 
 .hero-trust {
@@ -4031,6 +4032,7 @@ body.menu-open .mobile-menu-panel {
   width: 100%;
   min-height: 104px;
   padding: 14px 10px;
+  margin-top: 12px;
   gap: 8px;
   display: flex;
   flex-wrap: nowrap;
