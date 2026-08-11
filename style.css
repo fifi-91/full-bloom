@@ -3956,7 +3956,7 @@ body.menu-open .mobile-menu-panel {
   max-width: none;
   min-height: 100svh;
   height: 100svh;
-  padding: 0 24px 34px;
+  padding: 0 24px 40px;
   justify-content: flex-start;
   gap: 0;
 }
@@ -3967,7 +3967,7 @@ body.menu-open .mobile-menu-panel {
 }
 
 .hero-headline {
-  margin-top: 65%;
+  margin-top: 6%;
   max-width: 72%;
   font-size: 36px;
   line-height: 1.08;
@@ -3998,7 +3998,7 @@ body.menu-open .mobile-menu-panel {
   flex-direction: column;
   align-items: stretch;
   gap: 10px;
-  padding-bottom: 12px;
+  padding-bottom: 0;
 }
 
 .hero-actions .btn {
@@ -4019,7 +4019,6 @@ body.menu-open .mobile-menu-panel {
   background: rgba(251, 244, 230, 0.90);
   border-color: rgba(29, 23, 20, 0.72);
   color: var(--ink);
-  margin-bottom: 12px;
 }
 
 .hero-trust {
@@ -4032,7 +4031,6 @@ body.menu-open .mobile-menu-panel {
   width: 100%;
   min-height: 104px;
   padding: 14px 10px;
-  margin-top: 12px;
   gap: 8px;
   display: flex;
   flex-wrap: nowrap;
