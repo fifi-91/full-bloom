@@ -3998,7 +3998,7 @@ body.menu-open .mobile-menu-panel {
   flex-direction: column;
   align-items: stretch;
   gap: 10px;
-  padding-bottom: 0;
+  padding-bottom: 12px;
 }
 
 .hero-actions .btn {
