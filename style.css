@@ -3968,7 +3968,6 @@ body.menu-open .mobile-menu-panel {
 
 .hero-headline {
   margin-top: 60%;
-  margin-bottom: 12px;
   max-width: 72%;
   font-size: 36px;
   line-height: 1.08;
@@ -3981,7 +3980,7 @@ body.menu-open .mobile-menu-panel {
 
 .hero-sub-mobile {
   display: block;
-  margin: 14px 0 0;
+  margin: 14px 0 12px;
   padding: 0;
   background: none;
   backdrop-filter: none;
