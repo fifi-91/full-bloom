@@ -3919,16 +3919,27 @@ body.menu-open .mobile-menu-panel {
   font-weight: 500;
 }
 
-  .hero {
-  min-height: 100svh;
-  padding-bottom: 116px;
+.hero {
+  min-height: calc(100svh + 104px);
+  padding-bottom: 104px;
+}
+
+.hero-media {
+  height: 100svh;
+  bottom: auto;
 }
 
 .hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   object-position: 58% center;
 }
 
 .hero-overlay {
+  height: 100svh;
+  bottom: auto;
+
   background: linear-gradient(
     to bottom,
     rgba(26, 14, 8, 0.02) 0%,
@@ -3940,7 +3951,8 @@ body.menu-open .mobile-menu-panel {
 
 .hero-inner {
   max-width: none;
-  min-height: calc(100svh - 116px);
+  min-height: 100svh;
+  height: 100svh;
   padding: 0 24px 34px;
   justify-content: flex-start;
   gap: 0;
